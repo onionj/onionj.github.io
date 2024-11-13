@@ -6,6 +6,10 @@ Experienced Software Engineer with a proven track record of delivering innovativ
 
 ### Ati Shahr - [2022]-[Now]
 
+#### Messaging System
+* Developed a messaging system for SMS and push notifications with integrated priority management.
+* Utilized **Redis Streams** for message queuing, ensuring efficient, real-time processing and priority-based delivery.
+
 #### Mock Server
 * Built a mock server application with FastAPI to allow user-defined APIs and customizable response templates.
 * Integrated Jinja2 templating for dynamic, flexible response generation.
