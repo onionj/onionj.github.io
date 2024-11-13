@@ -7,46 +7,45 @@ Experienced Software Engineer with a proven track record of delivering innovativ
 ### Ati Shahr - [2022]-[Now]
 
 #### Mock Server
-Developed a user-friendly mock server application using FastAPI that enables:
-* User registration of APIs and their corresponding response templates.
-* Integration of Jinja2 templating language for dynamic response generation.
+* Built a mock server application with FastAPI to allow user-defined APIs and customizable response templates.
+* Integrated Jinja2 templating for dynamic, flexible response generation.
 
-#### User Analytic System
-Led the development and implementation of a real-time User Analytics System, leveraging FastAPI, ClickHouse, RabbitMQ, and WebSocket technologies.
-* Managed a high throughput of over a million data events per hour by leveraging RabbitMQ and WebSocket technologies, ensuring seamless data delivery.
+#### Real-Time User Analytics System
+* Led the development of a high-throughput analytics system using FastAPI, ClickHouse, RabbitMQ, and WebSockets.
+* Enabled real-time data handling of 1M+ events/hour with RabbitMQ and WebSockets, supporting seamless data delivery.
+* Developed dynamic user segmentation and automated personalized marketing triggers to drive user engagement.
 
-#### B2C Tourism Project
-* Contributed to the development of a tourism B2C platform with over two million registered users and connections to more than nine B2B platforms.
-* Enhanced the payment system's efficiency, enabling it to handle approximately 200 different payment modes based on various variables, such as service type, B2B provider, and payment type (IPG, MPL, WPG).
-* Implemented Async features to optimize the system's performance, reducing system slowdown during high loads by up to 70%.
+#### B2C Tourism Platform
+* Contributed to a tourism B2C platform with 3M+ registered users and integrations with 9+ B2B platforms.
+* Enhanced a multi-variable payment system to handle diverse payment modes (IPG, MPG, WPG, POS) based on service type, B2B provider, and payment provider.
+* Introduced asynchronous features to optimize performance, reducing system slowdowns.
 
-#### SIB (ticket system)
-* Optimized a reporting endpoint, resulting in a 20x speed improvement and eliminating system slowdown during high load times.
-* Collaborated on developing the second version of the project with FastAPI to facilitate asynchronous development and handle the system's high load.
+#### SIB (Ticket System)
+* Optimized a key reporting endpoint, achieving a 20x performance boost and eliminating slowdowns under high loads.
+* Contributed to the project’s second version using FastAPI, implementing asynchronous features to handle increased system load.
 
 ### Mehr Pars - [2021]-[2022] (Python Developer)
 
-#### Organizational resource management system
-* Designed and developed a migration module using object-oriented programming techniques, enabling seamless transition from previous project management systems to the Rainesh platform, resulting in a 40% increase in customer satisfaction.
-* Implemented automated testing using Unittest, reducing testing time by 30% and elevating code quality.
+#### Organizational Resource Management System
+* Developed a migration module with object-oriented programming, enabling seamless transitions from legacy project management systems to the Rainesh platform, improving customer satisfaction.
 
-#### Comprehensive warehouse system
-* Engineered a fuzzy reverse proxy module for a large-scale warehouse project with discreet services, simulating backend conditions during high-load times. Achieved a 20% reduction in error rates and enhanced user experience.
+#### Comprehensive Warehouse System
+* Built a fuzzy reverse proxy module for a large-scale warehouse project, simulating backend conditions under high load. Reduced error rates and improved user experience.
 
 ### Open Source
 
-#### Maintainer of PyBotNet framework. (https://github.com/onionj/pybotnet)
-A High-Level Remote Control Framework for Python with Telegram Integration 
+#### PyBotNet Framework Maintainer
+* Maintainer of [PyBotNet](https://github.com/onionj/pybotnet), a high-level Python remote control framework with Telegram integration.
 
 ### Technical Skills:
-* Proficient in Python programming, utilizing OOP, decorators, async, and websocket.
-* Experienced in web development using FastAPI and Django frameworks.
-* Skilled in database management with PostgreSQL, ClickHouse and Redis.
-* Knowledgeable in test frameworks, including unittest and Pytest, for unit testing.
-* Proficient in Linux-based systems administration.
-* Familiar with security concepts and best practices.
-* Experienced in containerization using Docker for deployment.
-* Proficient in using Git for version control and collaborative software development.
+* **Python**: Proficient in OOP, decorators, async programming, and WebSocket integration.
+* **Web Development**: FastAPI and Django frameworks.
+* **Databases**: PostgreSQL, ClickHouse, and Redis.
+* **Testing**: Pytest.
+* **Systems**: Linux-based administration.
+* **Security**: Familiar with core concepts and best practices.
+* **Containerization**: Docker for deployment.
+* **Version Control**: Git for collaborative development.
 
 ## Languages
 English (Fluent)
