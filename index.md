@@ -49,14 +49,13 @@ Experienced Software Engineer with a proven track record of delivering innovativ
 - Built [IP](https://github.com/onionj/ip), a TCP server written in Go that returns the client's IP and country in multiple formats.
 
 ### Technical Skills:
-* **Python**: Proficient in OOP, decorators, async programming, and WebSocket integration.
-* **Web Development**: FastAPI and Django frameworks.
-* **Databases**: PostgreSQL, ClickHouse, and Redis.
-* **Testing**: Pytest.
-* **Systems**: Linux-based administration.
-* **Security**: Familiar with core concepts and best practices.
-* **Containerization**: Docker for deployment.
-* **Version Control**: Git for collaborative development.
+* **Python**: Proficient in OOP, decorators, async programming, and testing
+* **Go**: Goroutines, channels, concurrency patterns, and testing
+* **Web Development**: FastAPI and Echo
+* **Databases**: PostgreSQL, ClickHouse, and Redis
+* **Systems**: Linux-based administration
+* **Security**: Familiar with core concepts and best practices
+* **Version Control**: Git for collaborative development and CI/CD pipelines
 
 ## Languages
 English (Fluent)
