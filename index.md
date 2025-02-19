@@ -4,7 +4,17 @@ Experienced Software Engineer with a proven track record of delivering innovativ
 
 ## Work Experience
 
-### Ati Shahr - [2022]-[Now]
+### Atishahr - [2022]-[Now]
+
+#### B2C Tourism Platform
+* Contributed to a tourism B2C platform with 3M+ registered users and integrations with 9+ B2B platforms.
+* Enhanced a multi-variable payment system to handle diverse payment modes (IPG, MPG, WPG, POS) based on service type, B2B provider, and payment provider.
+* Introduced asynchronous features to optimize performance, reducing system slowdowns.
+
+#### Real-Time User Analytics System  
+- Built a high-throughput analytics platform with FastAPI, ClickHouse, RabbitMQ, and WebSockets.
+- Implemented real-time event streaming, dynamic user segmentation, A/B testing, and automated engagement triggers.
+- Developed a **Journey Builder** to design personalized user flows, automating actions like notifications, discounts, and user behavior checks using conditional logic.
 
 #### Messaging System
 * Developed a messaging system for SMS and push notifications with integrated priority management.
@@ -14,17 +24,7 @@ Experienced Software Engineer with a proven track record of delivering innovativ
 * Built a mock server application with FastAPI to allow user-defined APIs and customizable response templates.
 * Integrated Jinja2 templating for dynamic, flexible response generation.
 
-#### Real-Time User Analytics System  
-- Built a high-throughput analytics platform with FastAPI, ClickHouse, RabbitMQ, and WebSockets.
-- Implemented real-time event streaming, dynamic user segmentation, A/B testing, and automated engagement triggers.
-- Developed a **Journey Builder** to design personalized user flows, automating actions like notifications, discounts, and user behavior checks using conditional logic.
-
-#### B2C Tourism Platform
-* Contributed to a tourism B2C platform with 3M+ registered users and integrations with 9+ B2B platforms.
-* Enhanced a multi-variable payment system to handle diverse payment modes (IPG, MPG, WPG, POS) based on service type, B2B provider, and payment provider.
-* Introduced asynchronous features to optimize performance, reducing system slowdowns.
-
-#### SIB (Ticket System)
+#### SIB Ticket System
 * Optimized a key reporting endpoint, achieving a 20x performance boost and eliminating slowdowns under high loads.
 * Contributed to the project's second version using FastAPI, implementing asynchronous features to handle increased system load.
 
