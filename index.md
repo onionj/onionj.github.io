@@ -16,13 +16,13 @@ Experienced Software Engineer with a proven track record of delivering innovativ
 - Implemented real-time event streaming, dynamic user segmentation, A/B testing, and automated engagement triggers.
 - Developed a **Journey Builder** to design personalized user flows, automating actions like notifications, discounts, and user behavior checks using conditional logic.
 
-#### Real-Time Taxi POS Backend
-- Built a WebSocket-based system for handling POS payments and live location streaming.
-- Enabled real-time driver payment reporting and live location tracking.
-
 #### Messaging System
 * Developed a messaging system for SMS and push notifications with integrated priority management.
 * Utilized **Redis Streams** for message queuing, ensuring efficient, real-time processing and priority-based delivery.
+
+#### Real-Time Taxi POS Backend
+- Built a WebSocket-based system for handling POS payments and live location streaming.
+- Enabled real-time driver payment reporting and live location tracking.
 
 #### Mock Server
 * Built a mock server application with FastAPI to allow user-defined APIs and customizable response templates.
