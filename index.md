@@ -44,14 +44,8 @@ Experienced Software Engineer with a proven track record of delivering innovativ
 * Built a fuzzy reverse proxy module for a large-scale warehouse project, simulating backend conditions under high load. Reduced error rates and improved user experience.
 
 ### Open Source
-
-#### PyBotNet Framework Maintainer
 - Maintainer of [PyBotNet](https://github.com/onionj/pybotnet), a high-level Python remote control framework with Telegram integration.
-
-#### Muxr  
 - Developed [Muxr](https://github.com/onionj/websocket-mux), a Go WebSocket multiplexing library for efficient real-time communication.  
-
-#### IP  
 - Built [IP](https://github.com/onionj/ip), a TCP server written in Go that returns the client's IP and country in multiple formats.
 
 ### Technical Skills:
