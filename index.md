@@ -9,15 +9,15 @@ Experienced Software Engineer with a proven track record of delivering innovativ
 #### B2C Tourism Platform
 * Contributed to a tourism B2C platform with 3M+ registered users and integrations with 9+ B2B platforms.
 * Enhanced a multi-variable payment system to handle diverse payment modes (IPG, MPG, WPG, POS) based on service type, B2B provider, and payment provider.
-* Introduced asynchronous features to optimize performance, reducing system slowdowns.
+* Introduced **asynchronous features** to optimize performance, reducing system slowdowns.
 
 #### Real-Time User Analytics System  
-- Built a high-throughput analytics platform with FastAPI, ClickHouse, RabbitMQ, and WebSockets.
-- Implemented real-time event streaming, dynamic user segmentation, A/B testing, and automated engagement triggers.
-- Developed a **Journey Builder** to design personalized user flows, automating actions like notifications, discounts, and user behavior checks using conditional logic.
+- Built a **high-throughput analytics** platform with **FastAPI**, **ClickHouse**, **RabbitMQ**, and **WebSockets**.
+- Implemented **real-time event streaming**, **dynamic user segmentation**, **A/B testing**, and **automated** engagement triggers.
+- Developed a **Journey Builder** to design personalized user flows, automating actions like notifications, discounts, and user behavior checks using **conditional logic**.
 
 #### Messaging System
-* Developed a messaging system for SMS and push notifications with integrated priority management.
+* Developed a messaging system for SMS and push notifications with integrated **priority management**.
 * Utilized **Redis Streams** for message queuing, ensuring efficient, real-time processing and priority-based delivery.
 
 #### Real-Time Taxi POS Backend
@@ -29,8 +29,8 @@ Experienced Software Engineer with a proven track record of delivering innovativ
 * Integrated Jinja2 templating for dynamic, flexible response generation.
 
 #### SIB Ticket System
-* Optimized a key reporting endpoint, achieving a 20x performance boost and eliminating slowdowns under high loads.
-* Contributed to the project's second version using FastAPI, implementing asynchronous features to handle increased system load.
+* Optimized a key reporting endpoint, achieving a **20x performance** boost and eliminating slowdowns under high loads.
+* Contributed to the project's second version using FastAPI, implementing **asynchronous features** to handle increased system load.
 
 ### Mehr Pars - [2021]-[2022] (Python Developer)
 
@@ -38,21 +38,21 @@ Experienced Software Engineer with a proven track record of delivering innovativ
 * Developed a migration module with object-oriented programming, enabling seamless transitions from legacy project management systems to the Rainesh platform, improving customer satisfaction.
 
 #### Comprehensive Warehouse System
-* Built a fuzzy reverse proxy module for a large-scale warehouse project, simulating backend conditions under high load. Reduced error rates and improved user experience.
+* Built a **fuzzy reverse proxy** module for a large-scale warehouse project, simulating backend conditions under high load. Reduced error rates and improved user experience.
 
 ### Open Source
-- Maintainer of [PyBotNet](https://github.com/onionj/pybotnet), a high-level Python remote control framework with Telegram integration.
-- Developed [Muxr](https://github.com/onionj/websocket-mux), a Go WebSocket multiplexing library for efficient real-time communication.  
-- Built [IP](https://github.com/onionj/ip), a TCP server written in Go that returns the client's IP and country in multiple formats.
+- Maintainer of [**PyBotNet**](https://github.com/onionj/pybotnet), a high-level Python remote control framework with Telegram integration.
+- Developed [**Muxr**](https://github.com/onionj/websocket-mux), a Go WebSocket multiplexing library for efficient real-time communication.  
+- Built [**IP**](https://github.com/onionj/ip), a TCP server written in Go that returns the client's IP and country in multiple formats.
 
 ### Technical Skills:
-* **Python**: Proficient in OOP, decorators, async programming, and testing
-* **Go**: Goroutines, channels, concurrency patterns, and testing
-* **Web Development**: FastAPI and Echo
-* **Databases**: PostgreSQL, ClickHouse, and Redis
-* **Systems**: Linux-based administration
+* **Python**: Proficient in **OOP**, **decorators**, **async** programming, and **testing**
+* **Go**: **Goroutines**, **channels**, **concurrency** patterns, and **testing**
+* **Web Development**: **FastAPI** and **Echo**
+* **Databases**: **PostgreSQL**, **ClickHouse**, and **Redis**
+* **Systems**: **Linux**-based administration
 * **Security**: Familiar with core concepts and best practices
-* **Version Control**: Git for collaborative development and CI/CD pipelines
+* **Version Control**: **Git** for collaborative development and **CI/CD** pipelines
 
 ## Languages
 English (Fluent)
