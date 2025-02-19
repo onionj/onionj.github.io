@@ -14,10 +14,17 @@ Experienced Software Engineer with a proven track record of delivering innovativ
 * Built a mock server application with FastAPI to allow user-defined APIs and customizable response templates.
 * Integrated Jinja2 templating for dynamic, flexible response generation.
 
-#### Real-Time User Analytics System
-* Led the development of a high-throughput analytics system using FastAPI, ClickHouse, RabbitMQ, and WebSockets.
-* Enabled real-time data handling of 1M+ events/hour with RabbitMQ and WebSockets, supporting seamless data delivery.
-* Developed dynamic user segmentation and automated personalized marketing triggers to drive user engagement.
+#### Real-Time User Analytics & Automation System
+- Ingests and processes frontend/backend events into ClickHouse for real-time insights.
+- Triggers automated Journeys with personalized workflows (notifications, discounts, behavior checks).
+- Built a drag-and-drop Journey Builder for visual automation design.
+- Streams live event data to the frontend via WebSockets.
+- Supports A/B testing, conditional logic, and multi-step automation for dynamic personalization.
+
+#### Real-Time User Analytics System  
+- Built a high-throughput analytics platform with FastAPI, ClickHouse, RabbitMQ, and WebSockets.
+- Implemented real-time event streaming, dynamic user segmentation, A/B testing, and automated engagement triggers.
+- Developed a **Journey Builder** to design personalized user flows, automating actions like notifications, discounts, and user behavior checks using conditional logic.
 
 #### B2C Tourism Platform
 * Contributed to a tourism B2C platform with 3M+ registered users and integrations with 9+ B2B platforms.
@@ -26,7 +33,7 @@ Experienced Software Engineer with a proven track record of delivering innovativ
 
 #### SIB (Ticket System)
 * Optimized a key reporting endpoint, achieving a 20x performance boost and eliminating slowdowns under high loads.
-* Contributed to the project’s second version using FastAPI, implementing asynchronous features to handle increased system load.
+* Contributed to the project's second version using FastAPI, implementing asynchronous features to handle increased system load.
 
 ### Mehr Pars - [2021]-[2022] (Python Developer)
 
