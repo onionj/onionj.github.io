@@ -14,13 +14,6 @@ Experienced Software Engineer with a proven track record of delivering innovativ
 * Built a mock server application with FastAPI to allow user-defined APIs and customizable response templates.
 * Integrated Jinja2 templating for dynamic, flexible response generation.
 
-#### Real-Time User Analytics & Automation System
-- Ingests and processes frontend/backend events into ClickHouse for real-time insights.
-- Triggers automated Journeys with personalized workflows (notifications, discounts, behavior checks).
-- Built a drag-and-drop Journey Builder for visual automation design.
-- Streams live event data to the frontend via WebSockets.
-- Supports A/B testing, conditional logic, and multi-step automation for dynamic personalization.
-
 #### Real-Time User Analytics System  
 - Built a high-throughput analytics platform with FastAPI, ClickHouse, RabbitMQ, and WebSockets.
 - Implemented real-time event streaming, dynamic user segmentation, A/B testing, and automated engagement triggers.
