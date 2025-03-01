@@ -34,7 +34,7 @@ Experienced Software Engineer with a proven track record of delivering innovativ
 * Optimized a key reporting endpoint, achieving a **20x performance** boost and eliminating slowdowns under high loads.
 * Contributed to the project's second version using FastAPI, implementing **asynchronous features** to handle increased system load.
 
-### Mehr Pars - [2021]-[2022] (Python Developer)
+### Mehr Pars - [2021]-[2022]
 
 #### Organizational Resource Management System
 * Developed **a migration module using OOP**, enabling seamless transitions from legacy project management systems to the Rainesh platform, improving customer satisfaction.
