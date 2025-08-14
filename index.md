@@ -1,5 +1,5 @@
 
-## Professional Summary:
+## Professional Summary
 Experienced Software Engineer with a proven track record of delivering innovative solutions for over 10 professional projects.
 
 ## Work Experience
