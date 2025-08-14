@@ -9,7 +9,7 @@ GitHub Pages is a simple service to publish a website directly on GitHub from a 
 
 Example resume created by this template (my resume): [onionj.github.io](https://onionj.github.io)
 ### content and configs:
-Edit `_config.yml` and `index.md` and `cv/index.html` file.
+Edit `_config.yml` and `index.md` file.
 
 ### publish in github:
 Run `make update` or run:\
@@ -19,7 +19,4 @@ Run `make update` or run:\
 
 
 ### create pdf:
-Run `make pd` or run:\
-`pip3 install pdfkit pyyaml` \
-`python3 create_pdf.py`
-
+Run `make pdf` or `make ats_pdf`

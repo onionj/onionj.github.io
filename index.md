@@ -44,13 +44,14 @@ Experienced Software Engineer with a proven track record of delivering innovativ
 
 ### Open Source
 - Maintainer of [**PyBotNet**](https://github.com/onionj/pybotnet), a Python-based remote control framework with Telegram integration.
-- Developed [**Muxr**](https://github.com/onionj/websocket-mux), a Go WebSocket multiplexing library for efficient real-time communication.  
+- Developed [**Muxr**](https://github.com/onionj/websocket-mux), a Go WebSocket multiplexing library for efficient real-time communication.
 - Created [**IP**](https://github.com/onionj/ip), a Go-based TCP server that returns the client's IP and country in multiple formats.
 
 ### Technical Skills:
-* **Python**: Proficient in **OOP**, **decorators**, **async** programming, and **testing**
+* **Python**: Proficient in **OOP**, **decorators**, **async** programming, **testing** and **web3.py**
 * **Go**: **Goroutines**, **channels**, **concurrency** patterns, and **testing**
 * **Web Development**: **FastAPI** and **Echo**
+* **Blockchain** / Smart Contracts: **Solidity**
 * **Databases**: **PostgreSQL**, **ClickHouse**, and **Redis**
 * **Systems**: **Linux**-based administration
 * **Security**: Familiar with core concepts and best practices

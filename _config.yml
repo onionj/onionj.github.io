@@ -6,13 +6,13 @@ title: Saman Nezafat
 description: "Saman Nezafat CV"
 
 pdf: true
-pdf_url: https://github.com/onionj/cv/raw/gh-pages/cv.pdf
+pdf_url: https://github.com/onionj/cv/raw/gh-pages/saman_nezafat_cv.pdf
 
 github: true
 github_url: https://github.com/onionj
 
 linkedin: true
-linkedin_url: https://www.linkedin.com/in/samannzft/
+linkedin_url: https://www.linkedin.com/in/samannzft
 
 gmail: true
 gmail_url: samannzft@gmail.com
@@ -23,9 +23,9 @@ phone_number: ""
 footer: false
 site_footer_text: ""
 
-# pdf creator configs:
+# web pdf creator configs:
 
-URL: https://onionj.github.io/cv/
+URL: https://onionj.github.io/
 
 # template configs:
 

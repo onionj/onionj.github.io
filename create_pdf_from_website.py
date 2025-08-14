@@ -10,8 +10,8 @@ with open("_config.yml") as file:
         "page-height": "400",
         "page-width": "280",
         "margin-top": "0in",
-        "margin-right": "0.5in",
+        "margin-right": "0.3in",
         "margin-bottom": "0in",
-        "margin-left": "0.5in",
+        "margin-left": "0.3in",
     }
     pdfkit.from_url(URL, "cv.pdf", options=options, verbose=True)
