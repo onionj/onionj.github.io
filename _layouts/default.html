@@ -1,69 +1,74 @@
 <!DOCTYPE html>
 
-<html lang="{{ site.lang | default: "en-US" }}">
-  <head>
-    <meta charset="UTF-8">
-    {% seo %}
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#107878">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-    {% include head-custom.html %}
+<html lang="{{ site.lang | default: " en-US" }}">
 
-    <meta name="pdfkit-page-size" content="Legal"/>
-    <meta name="pdfkit-orientation" content="Landscape"/>
+<head>
+  <meta charset="UTF-8">
 
-    <title>{{ site.title }}</title>
+  <title>{{ site.title | default: page.title }}</title>
 
-    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <meta name="apple-mobile-web-app-title" content="Saman Nezafat CV" />
-    <link rel="manifest" href="/site.webmanifest" />
+  {% seo title=false %}
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style"
+    type="text/css" crossorigin>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#107878">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+  {% include head-custom.html %}
 
-  </head>
+  <meta name="pdfkit-page-size" content="Legal" />
+  <meta name="pdfkit-orientation" content="Landscape" />
 
-  <body>
-    <a id="skip-to-content" href="#content">Skip to the content.</a>
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Saman Nezafat CV" />
+  <link rel="manifest" href="/site.webmanifest" />
 
-    <header class="page-header" role="banner">
-      <h1 class="project-name"> {{ site.full_name | page.title | default: site.title | default: site.github.repository_name }} </h1>
-      <!-- <h2 class="project-tagline">{{ site.description }}</h2> -->
-      
-      {% if site.pdf %}
-          <a href="{{ site.pdf_url }}" target="_blank" class="btn">Download PDF</a>
-      {% endif %}
+</head>
 
-      {% if site.github %}
-        <a href="{{ site.github_url }}" target="_blank" class="btn">GitHub</a>
-      {% endif %}
-      
-      {% if site.linkedin %}
-        <a href="{{ site.linkedin_url }}" target="_blank" class="btn">Linkedin</a>
-      {% endif %}
-      
-      {% if site.gmail %}
-        <a href="mailto:{{ site.gmail_url }}" target="_blank" class="btn">Gmail</a>
-      {% endif %}
+<body>
+  <a id="skip-to-content" href="#content">Skip to the content.</a>
 
-      {% if site.phone %}
-        <a href="tel:{{ site.phone_number}}" target="_blank" class="btn">{{ site.phone_number }}</a>
-      {% endif %}
-    </header>
+  <header class="page-header" role="banner">
+    <h1 class="project-name"> {{ site.full_name | page.title | default: site.title | default:
+      site.github.repository_name }} </h1>
+    <!-- <h2 class="project-tagline">{{ site.description }}</h2> -->
 
-    <main id="content" class="main-content" role="main">
-      <!-- index.md is content -->
-      {{ content }} 
-      
-      {% if site.footer %}
-      <footer class="site-footer">
-        {{ site.site_footer_text }}
-      </footer>
-      {% endif %}
+    {% if site.pdf %}
+    <a href="{{ site.pdf_url }}" target="_blank" class="btn">Download PDF</a>
+    {% endif %}
 
-    </main>
-  </body>
+    {% if site.github %}
+    <a href="{{ site.github_url }}" target="_blank" class="btn">GitHub</a>
+    {% endif %}
+
+    {% if site.linkedin %}
+    <a href="{{ site.linkedin_url }}" target="_blank" class="btn">Linkedin</a>
+    {% endif %}
+
+    {% if site.gmail %}
+    <a href="mailto:{{ site.gmail_url }}" target="_blank" class="btn">Gmail</a>
+    {% endif %}
+
+    {% if site.phone %}
+    <a href="tel:{{ site.phone_number}}" target="_blank" class="btn">{{ site.phone_number }}</a>
+    {% endif %}
+  </header>
+
+  <main id="content" class="main-content" role="main">
+    <!-- index.md is content -->
+    {{ content }}
+
+    {% if site.footer %}
+    <footer class="site-footer">
+      {{ site.site_footer_text }}
+    </footer>
+    {% endif %}
+
+  </main>
+</body>
+
 </html>
