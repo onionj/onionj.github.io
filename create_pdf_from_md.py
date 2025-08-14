@@ -11,12 +11,12 @@ header = f"# {configs['full_name']}\n"
 
 links = []
 if configs["github"]:
-    links.append(f"[**Github**: {configs['github_url']}]({configs['github_url']})")
+    links.append(f"[**Github**: {configs['github_url'].removeprefix('https://')}]({configs['github_url']})")
 if configs["gmail"]:
     links.append(f"[**Email**: {configs['gmail_url']}](mailto:{configs['gmail_url']})")
 if configs["linkedin"]:
     links.append(
-        f"[**LinkedIn**: {configs['linkedin_url']}]({configs['linkedin_url']})"
+        f"[**LinkedIn**: {configs['linkedin_url'].removeprefix('https://')}]({configs['linkedin_url']})"
     )
 if configs["phone"]:
     links.append(
