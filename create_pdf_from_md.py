@@ -29,9 +29,9 @@ header += " | ".join(links)
 extra_args = [
     "--pdf-engine=xelatex",
     "-V",
-    "geometry:paperwidth=230mm",
+    "geometry:paperwidth=235mm",
     "-V",
-    "geometry:paperheight=370mm",
+    "geometry:paperheight=360mm",
     "-V",
     "geometry:top=.5in,bottom=.5in,left=0.6in,right=0.6in",
     "-V",

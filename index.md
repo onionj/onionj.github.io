@@ -43,6 +43,7 @@ Experienced Software Engineer with a proven track record of delivering innovativ
 * Developed a **fuzzy reverse proxy** module for a large-scale warehouse system, simulating backend conditions under high load to improve frontend stability and user experience.
 
 ### Open Source
+- [**IHateYou**](https://ihateyou.top/) Token, A minimalist ERC-20 social token on the Polygon network, designed as an experiment in on-chain communication with a 100% fair launch model
 - [**PyBotNet**](https://github.com/onionj/pybotnet), A Python remote control framework with Telegram integration.
 - [**Muxr**](https://github.com/onionj/websocket-mux), A Golang WebSocket multiplexing library for efficient real-time communications.
 - [**IP**](https://github.com/onionj/ip), A Golang TCP server that returning the client's IP and country in multiple formats.
@@ -52,11 +53,8 @@ Experienced Software Engineer with a proven track record of delivering innovativ
 * **Python**: Proficient in **OOP**, **decorators**, **Async** programming and **testing**
 * **Go**: **Goroutine**, **channel**, **concurrency** patterns, and **testing**
 * **Web Development**: **FastAPI** and **Echo**
-* **Blockchain** / Smart Contracts: **Solidity** and **web3.py**
+* **Blockchain** / **Smart Contracts**: **Solidity** and **web3.py**
 * **Databases**: **PostgreSQL**, **ClickHouse**, and **Redis**
 * **Systems**: **Linux**-based administration
 * **Security**: Familiar with core concepts and best practices
 * **Version Control**: **Git** for collaborative development and **CI/CD** pipelines
-
-## Languages
-English (Fluent)
