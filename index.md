@@ -1,32 +1,28 @@
 
 ## Professional Summary
-Experienced Software Engineer with a proven track record of delivering innovative solutions for over 10 professional projects.
+Software Engineer with extensive experience designing and delivering scalable backend systems and real-time platforms. Proven success across 10+ professional projects using Python, Go, and modern distributed technologies.
 
 ## Work Experience
 
 ### Top - 2023-Present
 
 #### B2C Tourism Platform
-* Contribute to **a tourism B2C platform with 3M+ registered users** and **integrations with 9+ B2B platforms**.
-* Enhanced a **multi-variable payment system** supporting diverse payment modes (IPG, MPG, WPG, POS) based on **service type, B2B provider, and payment provider**.
-* Introduced **asynchronous features** to optimize performance, reducing system slowdowns.
+* Designed and built a large-scale **tourism platform (3M+ users, 9+ B2B partners)** with **multi-gateway payment** orchestration and asynchronous, **cached** processing to reduce latency and database load.
 
-#### Real-Time User Analytics System  
-- Built a **high-throughput analytics** platform with **FastAPI**, **ClickHouse**, **RabbitMQ**, and **WebSockets**.
-- Implemented **real-time event streaming**, **dynamic user segmentation**, **A/B testing**, and **automated** engagement triggers.
-- Developed a **Journey Builder** to design personalized user flows, automating actions like notifications, discounts, and user behavior checks using **conditional logic**.
+#### Real-Time User Analytics System
+* **Built a high-throughput analytics system** with a visual **Journey Builder** to automate personalized user flows, engagement triggers, and A/B tests; powered by FastAPI, ClickHouse, and RabbitMQ.
 
 #### Messaging System
-* Developed a messaging system for SMS and push notifications with integrated **priority management**.
-* Utilized **Redis Streams** for message queuing, ensuring efficient, real-time processing and priority-based delivery.
+* Built a priority-managed messaging system (SMS & Push) using **Redis Streams** for efficient, real-time message queuing.
 
 #### Real-Time Taxi POS Backend
-- Developed a **WebSocket-powered** system for real-time **POS payments** and **live location streaming**.
-- Implemented real-time driver payment reporting and live location tracking via WebSockets.
+* Developed a **WebSocket-powered** system for real-time **POS payments** and **live location streaming**.
 
 #### Mock Server
-* Built a mock server application with FastAPI to enable **user-defined APIs** and customizable response templates.
-* Integrated Jinja2 templating for dynamic, flexible response generation.
+* Architected a mock server with FastAPI to support user-defined APIs and dynamic Jinja2 response generation.
+
+#### AI-Powered Supermarket Agent
+* Built an automated shopping assistant for WhatsApp, enabling users to place orders via voice or text, with the AI handling product search, cart management, and order creation.
 
 ### Atishahr - 2022-2023
 
@@ -43,11 +39,11 @@ Experienced Software Engineer with a proven track record of delivering innovativ
 * Developed a **fuzzy reverse proxy** module for a large-scale warehouse system, simulating backend conditions under high load to improve frontend stability and user experience.
 
 ### Open Source
-- [**IHateYou**](https://ihateyou.top/) Token, A minimalist ERC-20 social token on the Polygon network, designed as an experiment in on-chain communication with a 100% fair launch model
 - [**PyBotNet**](https://github.com/onionj/pybotnet), A Python remote control framework with Telegram integration.
 - [**Muxr**](https://github.com/onionj/websocket-mux), A Golang WebSocket multiplexing library for efficient real-time communications.
 - [**IP**](https://github.com/onionj/ip), A Golang TCP server that returning the client's IP and country in multiple formats.
 - [**PriceBot**](https://github.com/onionj/pricebot), A Golang Telegram bot that provides real-time updates for currency exchange rates, gold prices, and cryptocurrency values in Iran's market.
+- [**IHateYou**](https://ihateyou.top/) Token, A minimalist ERC-20 social token on the Polygon network, designed as an experiment in on-chain communication with a 100% fair launch model
 
 ### Technical Skills:
 * **Python**: Proficient in **OOP**, **decorators**, **Async** programming and **testing**
@@ -58,3 +54,8 @@ Experienced Software Engineer with a proven track record of delivering innovativ
 * **Systems**: **Linux**-based administration
 * **Security**: Familiar with core concepts and best practices
 * **Version Control**: **Git** for collaborative development and **CI/CD** pipelines
+
+### Soft Skills
+* **Team Leadership**: Led a 3-member engineering team, guiding system design, reviewing merge requests, and ensuring code quality and delivery consistency.
+* **Collaboration & Communication**: Fostered effective teamwork through clear documentation, peer mentoring, and structured design discussions.
+
