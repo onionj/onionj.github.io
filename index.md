@@ -46,8 +46,7 @@ Software Engineer with extensive experience designing and delivering scalable ba
 - [**IHateYou**](https://ihateyou.top/) Token, A minimalist ERC-20 social token on the Polygon network, designed as an experiment in on-chain communication with a 100% fair launch model
 
 ### Technical Skills:
-* **Python**: Proficient in **OOP**, **decorators**, **Async** programming and **testing**
-* **Go**: **Goroutine**, **channel**, **concurrency** patterns, and **testing**
+* **Python**, **Go**
 * **Web Development**: **FastAPI** and **Echo**
 * **Blockchain** / **Smart Contracts**: **Solidity** and **web3.py**
 * **Databases**: **PostgreSQL**, **ClickHouse**, and **Redis**
