@@ -1,6 +1,6 @@
 
 ## Professional Summary
-Software Engineer with extensive experience designing and delivering scalable backend systems and real-time platforms. Proven success across 10+ professional projects using Python, Go, and modern distributed technologies.
+Software Engineer with extensive experience architecting high-concurrency backend systems and real-time platforms serving millions of users. Proven success in technical leadership and delivering scalable solutions using Python, Go, and distributed technologies.
 
 ## Work Experience
 
@@ -26,9 +26,6 @@ Software Engineer with extensive experience designing and delivering scalable ba
 #### Real-Time Taxi POS Backend
 * Developed a **WebSocket-powered** system for real-time **POS payments** and **live location streaming**.
 
-#### Mock Server
-* Architected a mock server with FastAPI to support user-defined APIs and dynamic Jinja2 response generation.
-
 #### AI-Powered Supermarket Agent
 * Built an automated shopping assistant for WhatsApp, enabling users to place orders via voice or text, with the AI handling product search, cart management, and order creation.
 
@@ -41,25 +38,33 @@ Software Engineer with extensive experience designing and delivering scalable ba
 ### Mehr Pars - 2021-2022
 
 #### Organizational Resource Management System
-* Developed **a migration module using OOP**, enabling seamless transitions from legacy project management systems to the Rainesh platform, improving customer satisfaction.
+* Engineered a **data migration** solution, enabling seamless transitions from legacy project management systems to the Rainesh platform, improving customer satisfaction.
+
+#### Comprehensive Warehouse System
+* Developed a **Load-Simulating Reverse Proxy** module for a large-scale warehouse system, simulating backend conditions under high load to improve frontend stability and user experience.
 
 ### Open Source
 - [**PyBotNet**](https://github.com/onionj/pybotnet), A Python remote control framework with Telegram integration.
 - [**Muxr**](https://github.com/onionj/websocket-mux), A Golang WebSocket multiplexing library for efficient real-time communications.
-- [**IP**](https://github.com/onionj/ip), A Golang TCP server that returning the client's IP and country in multiple formats.
-- [**PriceBot**](https://github.com/onionj/pricebot), A Golang Telegram bot that provides real-time updates for currency exchange rates, gold prices, and cryptocurrency values in Iran's market.
-- [**IHateYou**](https://ihateyou.top/) Token, A minimalist ERC-20 social token on the Polygon network, designed as an experiment in on-chain communication with a 100% fair launch model
+- [**IP**](https://github.com/onionj/ip), A Golang TCP server that returns the client's IP and country in multiple formats.
+- [**PriceBot**](https://github.com/onionj/pricebot), A Golang Telegram bot that provides real-time updates for currency exchange rates, gold prices, and cryptocurrency values.
+- [**Social Token Experiment**](https://ihateyou.top/), A minimalist ERC-20 social token on the Polygon network, designed as an experiment in on-chain communication.
 
 ### Technical Skills:
 * **Python**, **Go**
 * **Web Development**: **FastAPI**, **Gin**
 * **Blockchain** / **Smart Contracts**: **Solidity** and **web3.py**
 * **Databases**: **PostgreSQL**, **MongoDB**, **ClickHouse**, and **Redis**
-* **Systems**: **Linux**-based administration
-* **Security**: Familiar with core concepts and best practices
+* **Systems**: **Linux** administration, **Docker**
+* **Security**: **JWT**, **Encryption**, **OWASP** best practices
 * **Version Control**: **Git** for collaborative development and **CI/CD** pipelines
 
 ### Soft Skills
-* **Team Leadership**: Led a 3-member engineering team, guiding system design, reviewing merge requests, and ensuring code quality and delivery consistency.
-* **Collaboration & Communication**: Fostered effective teamwork through clear documentation, peer mentoring, and structured design discussions.
+* **Leadership & Collaboration**: Led a 3-member team, guiding design and reviews while cultivating collaboration through mentoring and documentation.
+
+### Education
+* **Bachelor of Science in Civil Engineering**
+
+### Languages
+* **English**: Professional Working Proficiency
 

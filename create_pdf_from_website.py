@@ -7,7 +7,7 @@ with open("_config.yml") as file:
     URL = configs["URL"]
 
     options = {
-        "page-height": "400",
+        "page-height": "410",
         "page-width": "280",
         "margin-top": "0in",
         "margin-right": "0.3in",
