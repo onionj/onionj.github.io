@@ -4,7 +4,15 @@ Software Engineer with extensive experience designing and delivering scalable ba
 
 ## Work Experience
 
-### Top - 2023-Present
+### Aria Hamrah - 2025-Present
+
+#### Payment Gateway
+* Architected a high-concurrency payment gateway in **Go**, ensuring transaction safety via **Redis distributed locking** and **idempotency**. Implemented a modular **adapter architecture** for seamless multi-provider integration.
+
+#### Meter Data Management System
+* Developed a **Go** backend that collects meter data and runs a multi-tier billing engine to automatically generate detailed PDF invoices.
+
+### Top - 2023-2025
 
 #### B2C Tourism Platform
 * Designed and built a large-scale **tourism platform (3M+ users, 9+ B2B partners)** with **multi-gateway payment** orchestration and asynchronous, **cached** processing to reduce latency and database load.
@@ -35,9 +43,6 @@ Software Engineer with extensive experience designing and delivering scalable ba
 #### Organizational Resource Management System
 * Developed **a migration module using OOP**, enabling seamless transitions from legacy project management systems to the Rainesh platform, improving customer satisfaction.
 
-#### Comprehensive Warehouse System
-* Developed a **fuzzy reverse proxy** module for a large-scale warehouse system, simulating backend conditions under high load to improve frontend stability and user experience.
-
 ### Open Source
 - [**PyBotNet**](https://github.com/onionj/pybotnet), A Python remote control framework with Telegram integration.
 - [**Muxr**](https://github.com/onionj/websocket-mux), A Golang WebSocket multiplexing library for efficient real-time communications.
@@ -47,9 +52,9 @@ Software Engineer with extensive experience designing and delivering scalable ba
 
 ### Technical Skills:
 * **Python**, **Go**
-* **Web Development**: **FastAPI** and **Echo**
+* **Web Development**: **FastAPI**, **Gin**
 * **Blockchain** / **Smart Contracts**: **Solidity** and **web3.py**
-* **Databases**: **PostgreSQL**, **ClickHouse**, and **Redis**
+* **Databases**: **PostgreSQL**, **MongoDB**, **ClickHouse**, and **Redis**
 * **Systems**: **Linux**-based administration
 * **Security**: Familiar with core concepts and best practices
 * **Version Control**: **Git** for collaborative development and **CI/CD** pipelines

@@ -31,7 +31,7 @@ extra_args = [
     "-V",
     "geometry:paperwidth=245mm",
     "-V",
-    "geometry:paperheight=380mm",
+    "geometry:paperheight=400mm",
     "-V",
     "geometry:top=.5in,bottom=.5in,left=0.6in,right=0.6in",
     "-V",
