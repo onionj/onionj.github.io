@@ -13,5 +13,6 @@ ats_pdf:
 	sudo apt-get install pandoc
 	pip install pypandoc pyyaml
 	sudo apt install texlive-xetex
-	sudo apt install ttf-mscorefonts-installer fontconfig
+	sudo apt install fonts-liberation fontconfig
+	sudo fc-cache -f
 	python3 create_pdf_from_md.py

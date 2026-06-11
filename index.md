@@ -9,6 +9,9 @@ Software Engineer with extensive experience architecting high-concurrency backen
 #### Payment Gateway
 * Architected a high-concurrency payment gateway in **Go**, ensuring transaction safety via **Redis distributed locking** and **idempotency**. Implemented a modular **adapter architecture** for seamless multi-provider integration.
 
+#### Audit Log Service
+* Built a tamper-evident audit log service in **Go** with **HMAC-SHA256 hash chains** per user, a **Redis Streams** → **ClickHouse** high-throughput ingestion pipeline, and an emergency mode with disk monitoring and automatic log rotation.
+
 #### Meter Data Management System
 * Developed a **Go** backend that collects meter data and runs a multi-tier billing engine to automatically generate detailed PDF invoices.
 
