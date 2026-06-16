@@ -4,15 +4,19 @@ update:
 	git commit -m "update"
 	git push origin gh-pages
 
+setup:
+	sudo apt-get update
+	sudo apt-get install -y pandoc texlive-xetex fonts-liberation fontconfig
+	sudo fc-cache -f
+	pip install pypandoc pyyaml python-docx
+
 pdf:
-	sudo apt install -y wkhtmltopdf
-	pip install pdfkit pyyaml
-	python3 create_pdf.py
+	python3 create_pdf_from_website.py
 
 ats_pdf:
-	sudo apt-get install pandoc
-	pip install pypandoc pyyaml
-	sudo apt install texlive-xetex
-	sudo apt install fonts-liberation fontconfig
-	sudo fc-cache -f
 	python3 create_pdf_from_md.py
+
+docx:
+	python3 build_docx.py
+
+all: ats_pdf docx
