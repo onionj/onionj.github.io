@@ -1,0 +1,62 @@
+name: Build CV (PDF + Word)
+
+# Regenerates the ATS PDF and Word (.docx) from index.md whenever the CV source
+# changes, then commits the rebuilt files back to gh-pages. This automates `make all`.
+
+on:
+  push:
+    branches: [gh-pages]
+    paths:
+      - "index.md"
+      - "_config.yml"
+      - "create_pdf_from_md.py"
+      - "build_docx.py"
+      - ".github/workflows/build-cv.yml"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+# Avoid overlapping runs racing to push.
+concurrency:
+  group: build-cv
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install system dependencies (pandoc + xelatex + fonts)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            pandoc texlive-xetex texlive-fonts-recommended fonts-liberation fontconfig
+          sudo fc-cache -f
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+
+      - name: Build ATS PDF and Word
+        run: |
+          python3 create_pdf_from_md.py
+          python3 build_docx.py
+
+      - name: Commit regenerated files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add ./*_cv.pdf ./*_cv.docx
+          if git diff --staged --quiet; then
+            echo "No changes in generated files."
+          else
+            git commit -m "chore: regenerate CV PDF and Word [skip ci]"
+            git push
+          fi

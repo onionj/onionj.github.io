@@ -6,9 +6,9 @@ update:
 
 setup:
 	sudo apt-get update
-	sudo apt-get install -y pandoc texlive-xetex fonts-liberation fontconfig
+	sudo apt-get install -y pandoc texlive-xetex texlive-fonts-recommended fonts-liberation fontconfig
 	sudo fc-cache -f
-	pip install pypandoc pyyaml python-docx
+	pip install --break-system-packages -r requirements.txt
 
 pdf:
 	python3 create_pdf_from_website.py

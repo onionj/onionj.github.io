@@ -1,0 +1,8 @@
+# Dependencies for building the ATS PDF (create_pdf_from_md.py) and Word (build_docx.py).
+# Used by `make all` and the GitHub Action.
+pypandoc
+pyyaml
+python-docx
+
+# Optional: only for create_pdf_from_website.py (needs system wkhtmltopdf, not used in CI).
+# pdfkit
