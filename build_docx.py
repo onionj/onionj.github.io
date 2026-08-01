@@ -15,7 +15,20 @@ from docx.enum.text import WD_ALIGN_PARAGRAPH
 # ── Config knobs ──────────────────────────────────────────────────────────────
 MARGIN_CM = 1.5
 MAX_BULLETS_PER_ROLE = 0  # 0 = no limit; set to 3 for a tight one-pager
-ACCENT_COLOR = RGBColor(0x00, 0x80, 0x80)  # teal
+
+# Same palette as header.tex / the site theme, so all three outputs match.
+ACCENT_COLOR = RGBColor(0x10, 0x78, 0x78)  # teal — sections and name
+DARK_COLOR = RGBColor(0x15, 0x20, 0x2B)    # near-black — company names
+GRAY_COLOR = RGBColor(0x4A, 0x55, 0x68)    # gray — project names, dates
+
+# '### ' headings that are really top-level sections, not employers.
+TOP_LEVEL_SUBHEADINGS = {
+    'open source',
+    'technical skills',
+    'soft skills',
+    'education',
+    'languages',
+}
 
 # ── Load sources ──────────────────────────────────────────────────────────────
 with open("_config.yml") as f:
@@ -90,18 +103,18 @@ def add_section_heading(doc, text):
     p = doc.add_paragraph()
     run = p.add_run(text.upper())
     run.bold = True
-    run.font.size = Pt(11)
+    run.font.size = Pt(12)
     run.font.color.rgb = ACCENT_COLOR
-    set_paragraph_spacing(p, before=8, after=2)
-    # bottom border
+    set_paragraph_spacing(p, before=14, after=3)
+    # accent rule under the heading, mirroring the PDF
     from docx.oxml.ns import qn
     pPr = p._p.get_or_add_pPr()
     pBdr = pPr.makeelement(qn('w:pBdr'), {})
     bottom = pBdr.makeelement(qn('w:bottom'), {
         qn('w:val'): 'single',
-        qn('w:sz'): '4',
-        qn('w:space'): '1',
-        qn('w:color'): '008080',
+        qn('w:sz'): '8',
+        qn('w:space'): '2',
+        qn('w:color'): '107878',
     })
     pBdr.append(bottom)
     pPr.append(pBdr)
@@ -109,16 +122,20 @@ def add_section_heading(doc, text):
 
 
 def add_role_heading(doc, company, dates):
+    """Employer + dates — the anchor of each job block, so it must dominate."""
     p = doc.add_paragraph()
     run = p.add_run(company)
     run.bold = True
-    run.font.size = Pt(10.5)
+    run.font.size = Pt(12)
+    run.font.color.rgb = DARK_COLOR
     if dates:
-        p.add_run("  —  ")
+        run_sep = p.add_run("  |  ")
+        run_sep.font.size = Pt(10)
+        run_sep.font.color.rgb = GRAY_COLOR
         run_d = p.add_run(dates)
         run_d.font.size = Pt(10)
-        run_d.font.color.rgb = RGBColor(0x55, 0x55, 0x55)
-    set_paragraph_spacing(p, before=4, after=1)
+        run_d.font.color.rgb = GRAY_COLOR
+    set_paragraph_spacing(p, before=10, after=2)
     return p
 
 
@@ -133,11 +150,14 @@ def add_stack_line(doc, text):
 
 
 def add_sub_heading(doc, text):
+    """Project name — clearly subordinate to the company heading above it."""
     p = doc.add_paragraph()
     run = p.add_run(text)
     run.bold = True
+    run.italic = True
     run.font.size = Pt(10)
-    set_paragraph_spacing(p, before=2, after=1)
+    run.font.color.rgb = GRAY_COLOR
+    set_paragraph_spacing(p, before=5, after=1)
     return p
 
 
@@ -166,10 +186,20 @@ current_section = None
 current_lines = []
 
 for line in body.split('\n'):
+    heading = None
     if line.startswith('## '):
+        heading = line.lstrip('#').strip().rstrip(':')
+    elif line.startswith('### '):
+        # Promote '### Technical Skills' and friends: they are peers of
+        # 'Work Experience', not employers nested inside it.
+        candidate = line.lstrip('#').strip().rstrip(':')
+        if candidate.lower() in TOP_LEVEL_SUBHEADINGS:
+            heading = candidate
+
+    if heading:
         if current_section:
             sections[current_section] = current_lines
-        current_section = line.lstrip('#').strip()
+        current_section = heading
         current_lines = []
     elif current_section is not None:
         current_lines.append(line)
@@ -200,9 +230,9 @@ name_p = doc.add_paragraph()
 name_p.alignment = WD_ALIGN_PARAGRAPH.CENTER
 run = name_p.add_run(config['full_name'])
 run.bold = True
-run.font.size = Pt(18)
+run.font.size = Pt(22)
 run.font.color.rgb = ACCENT_COLOR
-set_paragraph_spacing(name_p, before=0, after=2)
+set_paragraph_spacing(name_p, before=0, after=3)
 
 contacts = []
 if config.get('gmail'):

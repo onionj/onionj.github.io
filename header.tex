@@ -1,46 +1,73 @@
 % LaTeX preamble for the ATS PDF (create_pdf_from_md.py).
 %
-% Problem this solves: pandoc maps "### Company - dates" to \subsubsection and
-% "#### Project" to \paragraph. In the article class both default to bold
-% \normalsize, so companies and projects looked identical and you could not see
-% where one job ended and the next began.
+% Goal: a clear visual hierarchy so a human can scan the CV in seconds, while
+% staying ATS-safe (single column, real text, no tables/images for layout —
+% parsers ignore colour, so accent colours are fine).
 %
-% Redefined with \@startsection (base LaTeX) so no extra packages are needed:
-%   ## section   -> \Large  bold  (Professional Summary, Work Experience)
-%   ### company  -> \large  bold, rule above, generous space
-%   #### project -> \normalsize bold italic, tight space
+% Pandoc maps the markdown like this:
+%   # Name          -> \section
+%   ## Section      -> \subsection      (Professional Summary, Work Experience)
+%   ### Company     -> \subsubsection   (employer + dates)
+%   #### Project    -> \paragraph
 %
-% Signature: \@startsection{name}{level}{indent}{beforeskip}{afterskip}{style}
-% A positive afterskip makes the heading stand on its own line.
+% In the article class \subsubsection and \paragraph both default to bold
+% \normalsize, which is why companies and projects looked identical. Everything
+% below is redefined with base LaTeX \@startsection, so no extra TeX packages
+% are required (keeps CI light — no texlive-latex-extra).
+
+\usepackage{xcolor}
+
+% Teal matches the site theme colour on saman.is-a.dev.
+\definecolor{cvaccent}{HTML}{107878}
+\definecolor{cvdark}{HTML}{15202B}
+\definecolor{cvgray}{HTML}{4A5568}
+
+% Slightly airier lines are easier to read than the LaTeX default.
+\linespread{1.06}
+\setlength{\parskip}{0pt}
+
+% Rule drawn above each major section, creating a clear band.
+\newcommand{\cvrule}{%
+  \par\vspace{0.2ex}%
+  {\color{cvaccent}\hrule height 1pt}%
+  \vspace{1.0ex}%
+}
 
 \makeatletter
 
-% ## Major sections
+% # Name — centred, large, accent colour.
+\renewcommand\section{%
+  \@startsection{section}{1}{0pt}%
+    {0pt}%
+    {0.4ex}%
+    {\normalfont\huge\bfseries\color{cvaccent}\centering}%
+}
+
+% ## Professional Summary / Work Experience — accent, with a rule above.
 \renewcommand\subsection{%
   \@startsection{subsection}{2}{0pt}%
-    {2.2ex \@plus .4ex \@minus .2ex}%
-    {0.8ex \@plus .2ex}%
-    {\normalfont\Large\bfseries}%
+    {2.8ex \@plus .4ex \@minus .2ex}%
+    {1.0ex \@plus .2ex}%
+    {\normalfont\Large\bfseries\color{cvaccent}\cvrule}%
 }
 
-% ### Company - dates  (a thin rule separates each employer)
-\newcommand\cvcompanyrule{\vspace{0.4ex}\hrule height 0.4pt\vspace{-0.6ex}}
+% ### Company - dates — the anchor of each job block: big, dark, well spaced.
 \renewcommand\subsubsection{%
   \@startsection{subsubsection}{3}{0pt}%
-    {2.4ex \@plus .4ex \@minus .2ex}%
-    {0.6ex \@plus .2ex}%
-    {\normalfont\large\bfseries\cvcompanyrule\vspace{0.8ex}}%
+    {2.6ex \@plus .4ex \@minus .2ex}%
+    {0.7ex \@plus .2ex}%
+    {\normalfont\large\bfseries\color{cvdark}}%
 }
 
-% #### Project name
+% #### Project name — clearly subordinate to the company above it.
 \renewcommand\paragraph{%
   \@startsection{paragraph}{4}{0pt}%
-    {1.2ex \@plus .2ex \@minus .1ex}%
+    {1.4ex \@plus .2ex \@minus .1ex}%
     {0.3ex \@plus .1ex}%
-    {\normalfont\normalsize\bfseries\itshape}%
+    {\normalfont\normalsize\bfseries\itshape\color{cvgray}}%
 }
 
 \makeatother
 
-% Tighter bullet lists so the extra heading spacing does not cost a page.
-\setlength{\parskip}{0pt}
+% Match link colours to the accent (applied late so it wins over the template).
+\AtBeginDocument{\hypersetup{urlcolor=cvaccent,linkcolor=cvaccent}}

@@ -23,7 +23,8 @@ if configs["phone"]:
         f"[**Phone**: {configs['phone_number']}](tel:{configs['phone_number']})"
     )
 
-header += " | ".join(links)
+# Blank lines keep the links parsed as markdown inside the raw LaTeX block.
+header += "\\begin{center}\n\n" + "  |  ".join(links) + "\n\n\\end{center}"
 
 # PDF conversion options
 extra_args = [
@@ -36,8 +37,7 @@ extra_args = [
     "-V", "fontsize=10pt",
     "-V", "pagestyle=empty",
     "-V", "documentclass=article",
-    "-V", "linkcolor=blue",
-    "-V", "urlcolor=blue",
+    # Link colours are set to the accent colour in header.tex.
 ]
 
 file_name = f"{configs['full_name'].replace(' ', '_').lower()}_cv.pdf"
