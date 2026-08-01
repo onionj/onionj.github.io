@@ -1,72 +1,42 @@
 <!--
-  CV styling for the Cayman theme, matching header.tex (PDF) and build_docx.py (Word).
+  Light-touch styling for the Cayman theme.
 
-  Design rules shared by all three outputs:
-    1. Hierarchy comes from size and spacing, never from fading text out.
-       A heading is never lighter than the body text under it.
-    2. Colour is an accent only: name, section titles and links.
-       Every job/project title stays near-black.
-    3. Grey is reserved for metadata, not for headings.
-    4. Single column with real text, so ATS parsers read it correctly.
+  Deliberately minimal: the theme's own look (colours, fonts, heading sizes) is
+  kept. The PDF and Word outputs are documents and are styled like documents in
+  header.tex / build_docx.py — the site is a web page and should stay one.
+
+  Only two things are added here:
+    1. Extra breathing room above each employer, so job blocks are easy to scan.
+    2. A print stylesheet, so Ctrl+P produces a clean CV instead of a web page
+       with a giant banner.
 -->
 <style>
-  :root {
-    --cv-accent: #107878;
-    --cv-dark: #15202b;
-    --cv-meta: #5a6675;
-  }
-
-  .main-content {
-    color: var(--cv-dark);
-    max-width: 60rem;
-  }
-
-  /* ## Professional Summary / Work Experience */
-  .main-content h2 {
-    color: var(--cv-accent);
-    font-size: 1.35rem;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    border-bottom: 2px solid var(--cv-accent);
-    padding-bottom: 0.3rem;
-    margin-top: 2.6rem;
-    margin-bottom: 0.9rem;
-  }
-
-  /* ### Company - dates, and the promoted skill/education sections */
+  /* Employers (### Company - dates) get more air above them than project
+     headings, so it is obvious where one job ends and the next begins. */
   .main-content h3 {
-    color: var(--cv-dark);
-    font-size: 1.2rem;
-    margin-top: 2rem;
-    margin-bottom: 0.3rem;
+    margin-top: 2.4rem;
   }
 
-  /* #### Project name — one step smaller, same near-black */
+  /* Project names (#### ...) sit closer to the bullets they introduce. */
   .main-content h4 {
-    color: var(--cv-dark);
-    font-size: 1.02rem;
-    margin-top: 1.1rem;
-    margin-bottom: 0.25rem;
+    margin-top: 1.2rem;
+    margin-bottom: 0.3rem;
   }
 
   .main-content ul {
-    margin-top: 0.3rem;
-    margin-bottom: 0.3rem;
+    margin-top: 0.4rem;
   }
 
   .main-content li {
-    margin-bottom: 0.35rem;
-    line-height: 1.55;
+    line-height: 1.6;
+    margin-bottom: 0.4rem;
   }
 
-  .main-content a {
-    color: var(--cv-accent);
-  }
-
-  /* Printing the page should look like the PDF, not like a web page. */
+  /* Printing the page should give a usable CV, not a screenshot of a website. */
   @media print {
     .page-header,
-    #skip-to-content {
+    #skip-to-content,
+    .site-footer {
       display: none !important;
     }
 
@@ -74,14 +44,19 @@
       max-width: 100%;
       padding: 0;
       font-size: 11pt;
+      color: #15202b;
     }
 
     .main-content h2 {
-      margin-top: 1.4rem;
+      margin-top: 1.5rem;
     }
 
     .main-content h3 {
-      margin-top: 1.1rem;
+      margin-top: 1.2rem;
+    }
+
+    .main-content h4 {
+      margin-top: 0.8rem;
     }
   }
 </style>
