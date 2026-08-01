@@ -1,73 +1,79 @@
 % LaTeX preamble for the ATS PDF (create_pdf_from_md.py).
 %
-% Goal: a clear visual hierarchy so a human can scan the CV in seconds, while
-% staying ATS-safe (single column, real text, no tables/images for layout —
-% parsers ignore colour, so accent colours are fine).
+% Two goals: parse cleanly in ATS software, and let a human track the structure
+% at a glance.
 %
-% Pandoc maps the markdown like this:
-%   # Name          -> \section
-%   ## Section      -> \subsection      (Professional Summary, Work Experience)
-%   ### Company     -> \subsubsection   (employer + dates)
-%   #### Project    -> \paragraph
+% Design rules used here:
+%   1. Hierarchy comes from SIZE and SPACE, never from fading text out. A
+%      heading is never lighter than the body text under it.
+%   2. Colour is an accent only — the name, section titles and links. All body
+%      copy and every job/project title stays near-black.
+%   3. Grey is reserved for genuine metadata (dates), which is not a heading.
+%   4. Single column, real text, no tables or images for layout, so ATS parsers
+%      read it correctly. Colour itself is ignored by parsers and is safe.
 %
-% In the article class \subsubsection and \paragraph both default to bold
-% \normalsize, which is why companies and projects looked identical. Everything
-% below is redefined with base LaTeX \@startsection, so no extra TeX packages
-% are required (keeps CI light — no texlive-latex-extra).
+% Pandoc maps the markdown as:
+%   # Name       -> \section        ## Section -> \subsection
+%   ### Company  -> \subsubsection  #### Project -> \paragraph
+% In the article class the last two both default to bold \normalsize, which is
+% why companies and projects were indistinguishable. Redefined below with base
+% LaTeX \@startsection, so no extra TeX packages are needed (keeps CI light).
 
 \usepackage{xcolor}
 
 % Teal matches the site theme colour on saman.is-a.dev.
 \definecolor{cvaccent}{HTML}{107878}
 \definecolor{cvdark}{HTML}{15202B}
-\definecolor{cvgray}{HTML}{4A5568}
+\definecolor{cvmeta}{HTML}{5A6675}
 
-% Slightly airier lines are easier to read than the LaTeX default.
-\linespread{1.06}
+\linespread{1.05}
 \setlength{\parskip}{0pt}
+\color{cvdark}
 
-% Rule drawn above each major section, creating a clear band.
+% Accent rule drawn above each major section.
 \newcommand{\cvrule}{%
   \par\vspace{0.2ex}%
   {\color{cvaccent}\hrule height 1pt}%
-  \vspace{1.0ex}%
+  \vspace{1.1ex}%
 }
 
 \makeatletter
 
-% # Name — centred, large, accent colour.
+% # Name — left aligned, large, accent colour.
 \renewcommand\section{%
   \@startsection{section}{1}{0pt}%
     {0pt}%
-    {0.4ex}%
-    {\normalfont\huge\bfseries\color{cvaccent}\centering}%
+    {0.5ex}%
+    {\normalfont\huge\bfseries\color{cvaccent}}%
 }
 
-% ## Professional Summary / Work Experience — accent, with a rule above.
+% ## Professional Summary / Work Experience — accent, rule above.
 \renewcommand\subsection{%
   \@startsection{subsection}{2}{0pt}%
-    {2.8ex \@plus .4ex \@minus .2ex}%
-    {1.0ex \@plus .2ex}%
-    {\normalfont\Large\bfseries\color{cvaccent}\cvrule}%
+    {3.0ex \@plus .4ex \@minus .2ex}%
+    {1.1ex \@plus .2ex}%
+    {\normalfont\large\bfseries\color{cvaccent}\cvrule}%
 }
 
-% ### Company - dates — the anchor of each job block: big, dark, well spaced.
+% ### Company - dates — biggest item in the body, generous space above so each
+% employer block is visually separated.
 \renewcommand\subsubsection{%
   \@startsection{subsubsection}{3}{0pt}%
-    {2.6ex \@plus .4ex \@minus .2ex}%
-    {0.7ex \@plus .2ex}%
+    {2.8ex \@plus .4ex \@minus .2ex}%
+    {0.8ex \@plus .2ex}%
     {\normalfont\large\bfseries\color{cvdark}}%
 }
 
-% #### Project name — clearly subordinate to the company above it.
+% #### Project name — same near-black as the company, one step smaller.
+% Subordinate through size and spacing, not through a lighter colour.
 \renewcommand\paragraph{%
   \@startsection{paragraph}{4}{0pt}%
-    {1.4ex \@plus .2ex \@minus .1ex}%
-    {0.3ex \@plus .1ex}%
-    {\normalfont\normalsize\bfseries\itshape\color{cvgray}}%
+    {1.6ex \@plus .2ex \@minus .1ex}%
+    {0.35ex \@plus .1ex}%
+    {\normalfont\normalsize\bfseries\color{cvdark}}%
 }
 
 \makeatother
 
-% Match link colours to the accent (applied late so it wins over the template).
+% Links in the accent colour (applied late so it beats the pandoc template).
 \AtBeginDocument{\hypersetup{urlcolor=cvaccent,linkcolor=cvaccent}}

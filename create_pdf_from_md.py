@@ -23,8 +23,7 @@ if configs["phone"]:
         f"[**Phone**: {configs['phone_number']}](tel:{configs['phone_number']})"
     )
 
-# Blank lines keep the links parsed as markdown inside the raw LaTeX block.
-header += "\\begin{center}\n\n" + "  |  ".join(links) + "\n\n\\end{center}"
+header += " | ".join(links)
 
 # PDF conversion options
 extra_args = [

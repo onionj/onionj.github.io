@@ -17,9 +17,11 @@ MARGIN_CM = 1.5
 MAX_BULLETS_PER_ROLE = 0  # 0 = no limit; set to 3 for a tight one-pager
 
 # Same palette as header.tex / the site theme, so all three outputs match.
-ACCENT_COLOR = RGBColor(0x10, 0x78, 0x78)  # teal — sections and name
-DARK_COLOR = RGBColor(0x15, 0x20, 0x2B)    # near-black — company names
-GRAY_COLOR = RGBColor(0x4A, 0x55, 0x68)    # gray — project names, dates
+# Hierarchy comes from size and spacing; headings are never lighter than the
+# body text under them. Grey is reserved for metadata (dates), not headings.
+ACCENT_COLOR = RGBColor(0x10, 0x78, 0x78)  # teal — name, section titles, links
+DARK_COLOR = RGBColor(0x15, 0x20, 0x2B)    # near-black — all headings and body
+META_COLOR = RGBColor(0x5A, 0x66, 0x75)    # grey — dates and the stack line
 
 # '### ' headings that are really top-level sections, not employers.
 TOP_LEVEL_SUBHEADINGS = {
@@ -131,11 +133,11 @@ def add_role_heading(doc, company, dates):
     if dates:
         run_sep = p.add_run("  |  ")
         run_sep.font.size = Pt(10)
-        run_sep.font.color.rgb = GRAY_COLOR
+        run_sep.font.color.rgb = META_COLOR
         run_d = p.add_run(dates)
         run_d.font.size = Pt(10)
-        run_d.font.color.rgb = GRAY_COLOR
-    set_paragraph_spacing(p, before=10, after=2)
+        run_d.font.color.rgb = META_COLOR
+    set_paragraph_spacing(p, before=12, after=2)
     return p
 
 
@@ -144,20 +146,19 @@ def add_stack_line(doc, text):
     run = p.add_run(text)
     run.italic = True
     run.font.size = Pt(9)
-    run.font.color.rgb = RGBColor(0x55, 0x55, 0x55)
+    run.font.color.rgb = META_COLOR
     set_paragraph_spacing(p, before=0, after=1)
     return p
 
 
 def add_sub_heading(doc, text):
-    """Project name — clearly subordinate to the company heading above it."""
+    """Project name — subordinate through size and spacing, not a lighter colour."""
     p = doc.add_paragraph()
     run = p.add_run(text)
     run.bold = True
-    run.italic = True
-    run.font.size = Pt(10)
-    run.font.color.rgb = GRAY_COLOR
-    set_paragraph_spacing(p, before=5, after=1)
+    run.font.size = Pt(10.5)
+    run.font.color.rgb = DARK_COLOR
+    set_paragraph_spacing(p, before=6, after=1)
     return p
 
 
@@ -227,7 +228,7 @@ font.size = Pt(10)
 # ── Header: name + contacts ──────────────────────────────────────────────────
 
 name_p = doc.add_paragraph()
-name_p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+name_p.alignment = WD_ALIGN_PARAGRAPH.LEFT
 run = name_p.add_run(config['full_name'])
 run.bold = True
 run.font.size = Pt(22)
@@ -245,10 +246,10 @@ if config.get('phone') and config.get('phone_number'):
     contacts.append(config['phone_number'])
 
 contact_p = doc.add_paragraph()
-contact_p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-run = contact_p.add_run(' | '.join(contacts))
-run.font.size = Pt(9)
-run.font.color.rgb = RGBColor(0x33, 0x33, 0x33)
+contact_p.alignment = WD_ALIGN_PARAGRAPH.LEFT
+run = contact_p.add_run('  |  '.join(contacts))
+run.font.size = Pt(9.5)
+run.font.color.rgb = DARK_COLOR
 set_paragraph_spacing(contact_p, before=0, after=4)
 
 # ── Sections ──────────────────────────────────────────────────────────────────
