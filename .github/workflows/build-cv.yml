@@ -11,6 +11,7 @@ on:
       - "_config.yml"
       - "create_pdf_from_md.py"
       - "build_docx.py"
+      - "header.tex"
       - ".github/workflows/build-cv.yml"
   workflow_dispatch: {}
 

@@ -1,0 +1,46 @@
+% LaTeX preamble for the ATS PDF (create_pdf_from_md.py).
+%
+% Problem this solves: pandoc maps "### Company - dates" to \subsubsection and
+% "#### Project" to \paragraph. In the article class both default to bold
+% \normalsize, so companies and projects looked identical and you could not see
+% where one job ended and the next began.
+%
+% Redefined with \@startsection (base LaTeX) so no extra packages are needed:
+%   ## section   -> \Large  bold  (Professional Summary, Work Experience)
+%   ### company  -> \large  bold, rule above, generous space
+%   #### project -> \normalsize bold italic, tight space
+%
+% Signature: \@startsection{name}{level}{indent}{beforeskip}{afterskip}{style}
+% A positive afterskip makes the heading stand on its own line.
+
+\makeatletter
+
+% ## Major sections
+\renewcommand\subsection{%
+  \@startsection{subsection}{2}{0pt}%
+    {2.2ex \@plus .4ex \@minus .2ex}%
+    {0.8ex \@plus .2ex}%
+    {\normalfont\Large\bfseries}%
+}
+
+% ### Company - dates  (a thin rule separates each employer)
+\newcommand\cvcompanyrule{\vspace{0.4ex}\hrule height 0.4pt\vspace{-0.6ex}}
+\renewcommand\subsubsection{%
+  \@startsection{subsubsection}{3}{0pt}%
+    {2.4ex \@plus .4ex \@minus .2ex}%
+    {0.6ex \@plus .2ex}%
+    {\normalfont\large\bfseries\cvcompanyrule\vspace{0.8ex}}%
+}
+
+% #### Project name
+\renewcommand\paragraph{%
+  \@startsection{paragraph}{4}{0pt}%
+    {1.2ex \@plus .2ex \@minus .1ex}%
+    {0.3ex \@plus .1ex}%
+    {\normalfont\normalsize\bfseries\itshape}%
+}
+
+\makeatother
+
+% Tighter bullet lists so the extra heading spacing does not cost a page.
+\setlength{\parskip}{0pt}

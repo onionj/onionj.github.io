@@ -28,6 +28,8 @@ header += " | ".join(links)
 # PDF conversion options
 extra_args = [
     "--pdf-engine=xelatex",
+    # Heading hierarchy: company names must stand out from project names.
+    "--include-in-header=header.tex",
     "-V", "geometry:a4paper",
     "-V", "geometry:top=1.5cm,bottom=1.5cm,left=1.5cm,right=1.5cm",
     "-V", "mainfont=Liberation Sans",
