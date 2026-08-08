@@ -4,8 +4,8 @@ Backend Software Engineer with 4+ years of experience architecting high-concurre
 
 ## Work Experience
 
-### AryaHamrah - 2025-Present
-- Stack: Go, Redis, ClickHouse, MongoDB, Docker
+### Intelligent Processing of Pars Hadish - 2023-Present
+- Stack: Go, Python, FastAPI, PostgreSQL, MongoDB, ClickHouse, Redis, RabbitMQ, WebSocket, Docker
 
 #### Payment Gateway
 * Architected a high-concurrency payment gateway in **Go**, ensuring transaction safety via **Redis distributed locking** and **idempotency**. Implemented a modular **adapter architecture** for seamless multi-provider integration.
@@ -15,9 +15,6 @@ Backend Software Engineer with 4+ years of experience architecting high-concurre
 
 #### Meter Data Management System
 * Developed a **Go** backend that collects meter data and runs a multi-tier billing engine to automatically generate detailed PDF invoices.
-
-### Top - 2023-2025
-- Stack: Python, FastAPI, Go, ClickHouse, Redis, RabbitMQ, WebSocket, PostgreSQL
 
 #### B2C Tourism Platform
 * Designed and built a large-scale **tourism platform (3M+ users, 9+ B2B partners)** with **multi-gateway payment** orchestration and asynchronous, **cached** processing to reduce latency and database load.
@@ -41,7 +38,7 @@ Backend Software Engineer with 4+ years of experience architecting high-concurre
 * Optimized a key reporting endpoint, achieving a **20x performance** improvement and eliminating slowdowns under high load.
 * Contributed to the project's second version using **FastAPI**, implementing **asynchronous features** to handle increased system load.
 
-### Mehr Pars - 2021-2022
+### Mehr-e Pars ICT - 2021-2022
 - Stack: Python, FastAPI, PostgreSQL
 
 #### Organizational Resource Management System
