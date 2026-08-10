@@ -286,7 +286,9 @@ for section_name in SECTION_ORDER:
         current_company = None
         for line in lines:
             if line.startswith('### '):
-                match = re.match(r'###\s+(.+?)\s*-\s*(.+)', line)
+                # Require spaces around the separating dash, so hyphenated
+                # company names ("Mehr-e Pars ICT") are not split at the hyphen.
+                match = re.match(r'###\s+(.+?)\s+-\s+(.+)', line)
                 if match:
                     current_company = match.group(1).strip()
                     dates = match.group(2).strip()

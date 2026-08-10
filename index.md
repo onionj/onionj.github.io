@@ -8,16 +8,17 @@ Backend Software Engineer with 4+ years of experience architecting high-concurre
 - Stack: Go, Python, FastAPI, PostgreSQL, MongoDB, ClickHouse, Redis, RabbitMQ, WebSocket, Docker
 
 #### Payment Gateway
-* Architected a high-concurrency payment gateway in **Go**, ensuring transaction safety via **Redis distributed locking** and **idempotency**. Implemented a modular **adapter architecture** for seamless multi-provider integration.
+* Built and maintain the original production payment layer in **Python/FastAPI** for a B2C tourism platform (**3M+ users**, 5 integrated gateways).
+* Built a **Go** rewrite with a cleaner provider-adapter architecture (Make/Verify/Reverse/Refund per provider), **Redis distributed locking**, and **idempotency** guarantees; now used by two Shiraz municipal projects.
 
 #### Audit Log Service
-* Built a tamper-evident audit log service in **Go** with **HMAC-SHA256 hash chains** per user, a **Redis Streams** → **ClickHouse** high-throughput ingestion pipeline, and an emergency mode with disk monitoring and automatic log rotation.
+* Built a tamper-evident audit log service in **Go** with **per-source HMAC-SHA256 hash chains** — each connected backend has its own independent chain — a **Redis Streams** → **ClickHouse** high-throughput ingestion pipeline, and an emergency mode with disk monitoring and automatic log rotation.
 
 #### Meter Data Management System
 * Developed a **Go** backend that collects meter data and runs a multi-tier billing engine to automatically generate detailed PDF invoices.
 
 #### B2C Tourism Platform
-* Designed and built a large-scale **tourism platform (3M+ users, 9+ B2B partners)** with **multi-gateway payment** orchestration and asynchronous, **cached** processing to reduce latency and database load.
+* Designed and built a large-scale **tourism platform (3M+ users, 9+ B2B partners)** with asynchronous, **cached** processing to reduce latency and database load.
 
 #### Real-Time User Analytics System
 * Built a high-throughput analytics system with a visual **Journey Builder** to automate personalized user flows, engagement triggers, and A/B tests; powered by **FastAPI**, **ClickHouse**, and **RabbitMQ**.
@@ -31,14 +32,14 @@ Backend Software Engineer with 4+ years of experience architecting high-concurre
 #### AI-Powered Supermarket Agent
 * Built an automated shopping assistant for WhatsApp, enabling users to place orders via voice or text, with the AI handling product search, cart management, and order creation.
 
-### Atishahr - 2022-2023
+### Atishahr Smart City Iranians (Atishahr) - 2022-2023
 - Stack: Python, FastAPI, PostgreSQL
 
 #### SIB Ticket System
 * Optimized a key reporting endpoint, achieving a **20x performance** improvement and eliminating slowdowns under high load.
 * Contributed to the project's second version using **FastAPI**, implementing **asynchronous features** to handle increased system load.
 
-### Mehr-e Pars ICT - 2021-2022
+### Mehr-e Pars ICT (Mehr Pars) - 2021-2022
 - Stack: Python, FastAPI, PostgreSQL
 
 #### Organizational Resource Management System
