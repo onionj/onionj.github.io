@@ -7,8 +7,12 @@ Backend Software Engineer with 4+ years of experience architecting high-concurre
 ### Intelligent Processing of Pars Hadish - 2023-Present
 - Stack: Go, Python, FastAPI, PostgreSQL, MongoDB, ClickHouse, Redis, RabbitMQ, WebSocket, Docker
 
+#### B2C Tourism Platform
+* Tech-led a **tourism platform (3M+ users, 9+ B2B partners)** with a 2-engineer team, covering payment routing to per-account settlement terminals and a reconciliation system of 3 interacting state machines for automated and manual mismatch resolution.
+* Built corporate benefit-card contracts (quota- or balance-based entitlements per employee) and a multi-case **refund engine** (discount codes, disability subsidies, corporate credits); redesigned DB connection lifecycle and **Redis caching** to sustain **50,000 concurrent peak users**.
+
 #### Payment Gateway
-* Built and maintain the original production payment layer in **Python/FastAPI** for a B2C tourism platform (**3M+ users**, 5 integrated gateways).
+* Built and maintain the original production payment layer in **Python/FastAPI** for the tourism platform (5 integrated gateways).
 * Built a **Go** rewrite with a cleaner provider-adapter architecture (Make/Verify/Reverse/Refund per provider), **Redis distributed locking**, and **idempotency** guarantees; now used by two Shiraz municipal projects.
 
 #### Audit Log Service
@@ -16,9 +20,6 @@ Backend Software Engineer with 4+ years of experience architecting high-concurre
 
 #### Meter Data Management System
 * Developed a **Go** backend that collects meter data and runs a multi-tier billing engine to automatically generate detailed PDF invoices.
-
-#### B2C Tourism Platform
-* Designed and built a large-scale **tourism platform (3M+ users, 9+ B2B partners)** with asynchronous, **cached** processing to reduce latency and database load.
 
 #### Real-Time User Analytics System
 * Built a high-throughput analytics system with a visual **Journey Builder** to automate personalized user flows, engagement triggers, and A/B tests; powered by **FastAPI**, **ClickHouse**, and **RabbitMQ**.
