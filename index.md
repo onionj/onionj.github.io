@@ -1,6 +1,6 @@
 
 ## Professional Summary
-Backend Software Engineer with 4+ years of experience architecting high-concurrency systems and real-time platforms serving millions of users. Proven track record in technical leadership and delivering scalable, distributed solutions in Go and Python. Open to relocation with visa sponsorship.
+Backend Software Engineer with 5 years of experience architecting high-concurrency systems and real-time platforms serving millions of users. Proven track record in technical leadership and delivering scalable, distributed solutions in Go and Python. Open to relocation with visa sponsorship.
 
 ## Work Experience
 
