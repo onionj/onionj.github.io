@@ -18,6 +18,10 @@ Backend Software Engineer with 5 years of experience architecting high-concurren
 #### Audit Log Service
 * Built a tamper-evident audit log service in **Go** with **per-source HMAC-SHA256 hash chains** — each connected backend has its own independent chain — a **Redis Streams** → **ClickHouse** high-throughput ingestion pipeline, and an emergency mode with disk monitoring and automatic log rotation.
 
+#### Nekisa — Building Management & Security Monitoring
+* Contributed to an event-driven platform managing **4,500+ IoT devices** (cameras, access control, parking barriers) in production at Atlas Mall Tehran and Shiraz Metro, unifying **building management and security monitoring** under one scenario engine: device data streams in through **RabbitMQ**, is evaluated against configurable automation rules, and matching events are pushed to live dashboards in real time — opening the cameras covering a zone when a door opens, or triggering PA announcements on a fire signal.
+* Integrated new device classes and implemented **camera tamper detection**, capturing the shock-wave signal and an automatic snapshot the moment a unit is physically disturbed and exposing it to the scenario engine like any other device signal. Currently hardening the platform's security posture toward a formal security certification.
+
 #### Meter Data Management System
 * Developed a **Go** backend that collects meter data and runs a multi-tier billing engine to automatically generate detailed PDF invoices.
 
