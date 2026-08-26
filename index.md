@@ -12,7 +12,7 @@ Backend Software Engineer with 5 years of experience architecting high-concurren
 * Built corporate benefit-card contracts (quota- or balance-based entitlements per employee) and a multi-case **refund engine** (discount codes, disability subsidies, corporate credits); redesigned DB connection lifecycle and **Redis caching** to sustain **50,000 concurrent peak users**.
 
 #### Payment Gateway
-* Built and own the production payment layer, in two independent implementations for two separate teams: **Python/FastAPI** and **Go**, both on the same provider-adapter architecture (Make/Verify/Reverse/Refund per provider), with **Redis distributed locking** and **idempotency** guarantees. 5 integrated gateways; the Go build is used by two Shiraz municipal projects.
+* Built and own the production payment layer, in two independent implementations for two separate teams: **Python/FastAPI** and **Go**. Every provider sits behind one fixed 6-endpoint contract (make/verify/reverse plus open/approve/cancel), so adding a gateway never changes calling code; **Redis distributed locking** and **idempotency** guarantee exactly-once capture. 5 integrated gateways; the Go build is used by two Shiraz municipal projects.
 
 #### Audit Log Service
 * Built and own a tamper-evident audit log service in **Go**, from design through production: **per-source HMAC-SHA256 hash chains** — each connected backend has its own independent chain — a **Redis Streams** → **ClickHouse** high-throughput ingestion pipeline, and an emergency mode with disk monitoring and automatic log rotation.
@@ -31,7 +31,7 @@ Backend Software Engineer with 5 years of experience architecting high-concurren
 * Built and own a priority-managed notification system (SMS & Push) on **Redis Streams**, serving real-time queuing across services.
 
 #### Real-Time Taxi POS Backend
-* Developed a **WebSocket-powered** system for real-time **POS payments** and **live location streaming**.
+* Designed and built a **WebSocket-powered** system for real-time **POS payments** and **live location streaming**, then extended it with the team as it grew, adding operational reporting.
 
 #### AI-Powered Supermarket Agent
 * Built and own an automated shopping assistant for WhatsApp, live in production: users order by voice or text while the agent handles product search, cart state across a long conversation, and order creation.
@@ -57,7 +57,7 @@ Backend Software Engineer with 5 years of experience architecting high-concurren
 - [**IP**](https://github.com/onionj/ip), A Go TCP server that returns the client's IP and country in multiple formats.
 - [**PriceBot**](https://github.com/onionj/pricebot), A Go Telegram bot providing real-time currency exchange rates, gold prices, and cryptocurrency values.
 - [**Social Token Experiment**](https://github.com/onionj), A minimalist ERC-20 social token on Polygon, designed as an experiment in on-chain communication (Solidity).
-- [**PyBotNet**](https://github.com/onionj/pybotnet), An educational security-research framework in Python for exploring remote-control patterns via Telegram.
+- [**PyRemote**](https://github.com/onionj/pybotnet), An educational security-research framework in Python for exploring remote-control patterns over a chat transport.
 
 ### Technical Skills
 - **Languages**: Go, Python, Solidity
