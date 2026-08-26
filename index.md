@@ -53,11 +53,11 @@ Backend Software Engineer with 5 years of experience architecting high-concurren
 * Developed a **load-simulating reverse proxy** module for a large-scale warehouse system, simulating backend conditions under high load to improve frontend stability.
 
 ### Open Source
+- [**PyRemote**](https://github.com/onionj/pyremote) (**265 stars, 68 forks**), An educational security-research framework in Python for exploring remote-control patterns over a chat transport; published on PyPI as `pybotnet`.
 - [**Muxr**](https://github.com/onionj/websocket-mux), A Go WebSocket multiplexing library for efficient real-time communications.
 - [**IP**](https://github.com/onionj/ip), A Go TCP server that returns the client's IP and country in multiple formats.
 - [**PriceBot**](https://github.com/onionj/pricebot), A Go Telegram bot providing real-time currency exchange rates, gold prices, and cryptocurrency values.
 - [**Social Token Experiment**](https://ihateyou.top), A minimalist ERC-20 social token on Polygon, designed as an experiment in on-chain communication (Solidity).
-- [**PyRemote**](https://github.com/onionj/pyremote), An educational security-research framework in Python for exploring remote-control patterns over a chat transport; published on PyPI as `pybotnet`.
 
 ### Technical Skills
 - **Languages**: Go, Python, Solidity
