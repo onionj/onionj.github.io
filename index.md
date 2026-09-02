@@ -12,7 +12,7 @@ Backend Software Engineer with 5 years of experience architecting high-concurren
 * Built corporate benefit-card contracts (quota- or balance-based entitlements per employee) and a multi-case **refund engine** (discount codes, disability subsidies, corporate credits); redesigned DB connection lifecycle and **Redis caching** to sustain **50,000 concurrent peak users**.
 
 #### Payment Gateway
-* Built and own the production payment layer, in two independent implementations for two separate teams: **Python/FastAPI** and **Go**. Every provider sits behind one fixed 6-endpoint contract (make/verify/reverse plus open/approve/cancel), so adding a gateway never changes calling code; **Redis distributed locking** and **idempotency** guarantee exactly-once capture. 5 integrated gateways; the Go build is used by two municipal transit projects.
+* Built and own the production payment layer, in two independent implementations for two separate teams: **Python/FastAPI** and **Go**. Every provider sits behind one fixed 6-endpoint contract (make/verify/reverse plus open/approve/cancel), so adding a gateway never changes calling code; **Redis distributed locking** and **idempotency** guarantee exactly-once capture. 5 integrated gateways; the Go build is used by two municipal projects.
 
 #### Audit Log Service
 * Built and own a tamper-evident audit log service in **Go**, from design through production: **per-source HMAC-SHA256 hash chains** — each connected backend has its own independent chain — a **Redis Streams** → **ClickHouse** high-throughput ingestion pipeline, and an emergency mode with disk monitoring and automatic log rotation.
