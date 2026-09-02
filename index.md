@@ -4,7 +4,7 @@ Backend Software Engineer with 5 years of experience architecting high-concurren
 
 ## Work Experience
 
-### Intelligent Processing of Pars Hadish - 2023-Present
+### Pars Hadish - 2023-Present
 - Stack: Go, Python, FastAPI, PostgreSQL, MongoDB, ClickHouse, Redis, RabbitMQ, WebSocket, Docker
 
 #### B2C Tourism Platform
@@ -12,13 +12,13 @@ Backend Software Engineer with 5 years of experience architecting high-concurren
 * Built corporate benefit-card contracts (quota- or balance-based entitlements per employee) and a multi-case **refund engine** (discount codes, disability subsidies, corporate credits); redesigned DB connection lifecycle and **Redis caching** to sustain **50,000 concurrent peak users**.
 
 #### Payment Gateway
-* Built and own the production payment layer, in two independent implementations for two separate teams: **Python/FastAPI** and **Go**. Every provider sits behind one fixed 6-endpoint contract (make/verify/reverse plus open/approve/cancel), so adding a gateway never changes calling code; **Redis distributed locking** and **idempotency** guarantee exactly-once capture. 5 integrated gateways; the Go build is used by two Shiraz municipal projects.
+* Built and own the production payment layer, in two independent implementations for two separate teams: **Python/FastAPI** and **Go**. Every provider sits behind one fixed 6-endpoint contract (make/verify/reverse plus open/approve/cancel), so adding a gateway never changes calling code; **Redis distributed locking** and **idempotency** guarantee exactly-once capture. 5 integrated gateways; the Go build is used by two municipal projects.
 
 #### Audit Log Service
 * Built and own a tamper-evident audit log service in **Go**, from design through production: **per-source HMAC-SHA256 hash chains** — each connected backend has its own independent chain — a **Redis Streams** → **ClickHouse** high-throughput ingestion pipeline, and an emergency mode with disk monitoring and automatic log rotation.
 
 #### Nekisa — Building Management & Security Monitoring
-* Backend lead on a **building management and security platform** running **4,500+ IoT devices** (cameras, access control, barriers) in production at Atlas Mall Tehran and Shiraz Metro, where **RabbitMQ** device streams drive a configurable scenario engine — surfacing a zone's cameras the moment a door opens.
+* Backend lead on a **building management and security platform** running **4,500+ IoT devices** (cameras, access control, barriers) in production at a large shopping mall and a metro system, where **RabbitMQ** device streams drive a configurable scenario engine — surfacing a zone's cameras the moment a door opens.
 * Took over as sole backend engineer on this long-running production system and integrated several new device types, including **camera tamper detection** that stores the shock-wave signal and a snapshot when a unit is physically disturbed; now hardening the platform toward a formal security certification.
 
 #### Meter Data Management System
@@ -36,14 +36,14 @@ Backend Software Engineer with 5 years of experience architecting high-concurren
 #### AI-Powered Supermarket Agent
 * Built and own an automated shopping assistant for WhatsApp, live in production: users order by voice or text while the agent handles product search, cart state across a long conversation, and order creation.
 
-### Atishahr Smart City Iranians (Atishahr) - 2022-2023
+### Atishahr - 2022-2023
 - Stack: Python, FastAPI, PostgreSQL
 
 #### SIB Ticket System
 * Optimized a key reporting endpoint, achieving a **20x performance** improvement and eliminating slowdowns under high load.
 * Contributed to the project's second version using **FastAPI**, implementing **asynchronous features** to handle increased system load.
 
-### Mehr-e Pars ICT (Mehr Pars) - 2021-2022
+### Mehr Pars - 2021-2022
 - Stack: Python, FastAPI, PostgreSQL
 
 #### Organizational Resource Management System
