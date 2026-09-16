@@ -145,21 +145,6 @@ def add_role_heading(doc, company, dates):
     return p
 
 
-def add_company_descriptor(doc, text):
-    """One-line 'what this company does', straight under the employer heading.
-
-    Written as *italic text* in index.md. Without an explicit branch it matched
-    no rule in the section loop and vanished from the .docx entirely.
-    """
-    p = doc.add_paragraph()
-    run = p.add_run(text)
-    run.italic = True
-    run.font.size = Pt(9)
-    run.font.color.rgb = META_COLOR
-    set_paragraph_spacing(p, before=0, after=3)
-    return p
-
-
 def add_stack_line(doc, text):
     p = doc.add_paragraph()
     run = p.add_run(text)
@@ -319,10 +304,6 @@ for section_name in SECTION_ORDER:
                     bullet_count = 0
             elif line.startswith('#### '):
                 add_sub_heading(doc, line.lstrip('#').strip())
-            elif line.startswith('*') and line.rstrip().endswith('*') \
-                    and not line.startswith('* '):
-                # *One-line company descriptor.* — italic, no bullet marker.
-                add_company_descriptor(doc, line.strip().strip('*').strip())
             elif line.startswith('- Stack:'):
                 add_stack_line(doc, line.lstrip('- ').strip())
             elif line.startswith('* ') or line.startswith('- '):
