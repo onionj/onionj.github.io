@@ -6,6 +6,7 @@ Backend Software Engineer with 5 years of experience architecting high-concurren
 
 ### Pars Hadish - 2023-Present
 *B2C travel and payments platform, ~30 people.*
+
 - Stack: Go, Python, FastAPI, PostgreSQL, MongoDB, ClickHouse, Redis, RabbitMQ, WebSocket, Docker
 
 #### B2C Tourism Platform
@@ -39,6 +40,7 @@ Backend Software Engineer with 5 years of experience architecting high-concurren
 
 ### Atishahr - 2022-2023
 *Enterprise ticketing SaaS.*
+
 - Stack: Python, FastAPI, PostgreSQL
 
 #### SIB Ticket System
@@ -47,6 +49,7 @@ Backend Software Engineer with 5 years of experience architecting high-concurren
 
 ### Mehr Pars - 2021-2022
 *Enterprise resource-management software.*
+
 - Stack: Python, FastAPI, PostgreSQL
 
 #### Organizational Resource Management System
