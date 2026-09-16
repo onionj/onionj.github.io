@@ -124,12 +124,16 @@ def add_section_heading(doc, text):
 
 
 def add_role_heading(doc, company, dates):
-    """Employer + dates — the anchor of each job block, so it must dominate."""
+    """Employer + dates — the anchor of each job block, so it must dominate.
+
+    Accent-coloured, matching header.tex: project headings under it are
+    near-black, so colour (not just size) separates the two levels.
+    """
     p = doc.add_paragraph()
     run = p.add_run(company)
     run.bold = True
     run.font.size = Pt(12)
-    run.font.color.rgb = DARK_COLOR
+    run.font.color.rgb = ACCENT_COLOR
     if dates:
         run_sep = p.add_run("  |  ")
         run_sep.font.size = Pt(10)
