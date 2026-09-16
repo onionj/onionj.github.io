@@ -5,7 +5,7 @@ Backend Software Engineer with 5 years of experience architecting high-concurren
 ## Work Experience
 
 ### Pars Hadish - 2023-Present
-*B2C travel and payments platform, ~30 people.*
+*B2C travel and payments platform.*
 
 - Stack: Go, Python, FastAPI, PostgreSQL, MongoDB, ClickHouse, Redis, RabbitMQ, WebSocket, Docker
 
