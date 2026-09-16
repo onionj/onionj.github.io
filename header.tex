@@ -47,25 +47,29 @@
     {\normalfont\huge\bfseries\color{cvaccent}}%
 }
 
-% ## Professional Summary / Work Experience — accent, rule above.
+% ## Professional Summary / Work Experience — accent, rule above, one size up
+% from a company heading so the two accent levels never collide.
 \renewcommand\subsection{%
   \@startsection{subsection}{2}{0pt}%
     {3.0ex \@plus .4ex \@minus .2ex}%
     {1.1ex \@plus .2ex}%
-    {\normalfont\large\bfseries\color{cvaccent}\cvrule}%
+    {\normalfont\Large\bfseries\color{cvaccent}\cvrule}%
 }
 
-% ### Company - dates — biggest item in the body, generous space above so each
-% employer block is visually separated.
+% ### Company - dates — biggest item in the body, in the accent colour so an
+% employer is never mistaken for one of the projects nested under it. Measured
+% from the built PDF: company and project were both 12pt/10pt in the SAME
+% near-black, and 2pt alone does not read as a level change at a glance.
 \renewcommand\subsubsection{%
   \@startsection{subsubsection}{3}{0pt}%
     {2.8ex \@plus .4ex \@minus .2ex}%
     {0.8ex \@plus .2ex}%
-    {\normalfont\large\bfseries\color{cvdark}}%
+    {\normalfont\large\bfseries\color{cvaccent}}%
 }
 
-% #### Project name — same near-black as the company, one step smaller.
-% Subordinate through size and spacing, not through a lighter colour.
+% #### Project name — near-black, one step smaller than the company above it.
+% Subordinate through colour AND size: the company is accent-coloured, the
+% project is not, so the two levels separate at a glance.
 \renewcommand\paragraph{%
   \@startsection{paragraph}{4}{0pt}%
     {1.6ex \@plus .2ex \@minus .1ex}%

@@ -55,14 +55,14 @@ Backend Software Engineer with 5 years of experience architecting high-concurren
 #### Comprehensive Warehouse System
 * Developed a **load-simulating reverse proxy** module for a large-scale warehouse system, simulating backend conditions under high load to improve frontend stability.
 
-### Open Source
+## Open Source
 - [**PyRemote**](https://github.com/onionj/pyremote) (**265 stars, 68 forks**), An educational security-research framework in Python for exploring remote-control patterns over a chat transport.
 - [**Muxr**](https://github.com/onionj/websocket-mux), A Go WebSocket multiplexing library for efficient real-time communications.
 - [**IP**](https://github.com/onionj/ip), A Go TCP server that returns the client's IP and country in multiple formats.
 - [**PriceBot**](https://github.com/onionj/pricebot), A Go Telegram bot providing real-time currency exchange rates, gold prices, and cryptocurrency values.
 - [**Social Token Experiment**](https://ihateyou.top), A minimalist ERC-20 social token on Polygon, designed as an experiment in on-chain communication (Solidity).
 
-### Technical Skills
+## Technical Skills
 - **Languages**: Go, Python, Solidity
 - **Frameworks & Protocols**: FastAPI, Gin, REST, WebSocket
 - **Databases & Caching**: PostgreSQL, MongoDB, ClickHouse, Redis
@@ -71,12 +71,12 @@ Backend Software Engineer with 5 years of experience architecting high-concurren
 - **DevOps**: Linux, Docker, Git, CI/CD
 - **Security**: JWT, OWASP best practices
 
-### Soft Skills
+## Soft Skills
 * **Leadership & Collaboration**: Led a 3-member engineering team, guiding system design and code reviews while cultivating collaboration through mentoring and documentation.
 
-### Education
+## Education
 * **Bachelor of Science in Civil Engineering**
 
-### Languages
+## Languages
 * **English**: Professional Working Proficiency
 
