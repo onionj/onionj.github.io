@@ -30,6 +30,13 @@
 \setlength{\parskip}{0pt}
 \color{cvdark}
 
+% Left-align body text. LaTeX justifies by default, which stretches the spaces
+% between words to force a flush right edge; on a dense CV that produces visibly
+% uneven gaps line to line. \raggedright keeps word spacing constant.
+% \setlength{\parindent}{0pt} because ragged text must not also indent.
+\raggedright
+\setlength{\parindent}{0pt}
+
 % Accent rule drawn above each major section.
 \newcommand{\cvrule}{%
   \par\vspace{0.2ex}%
