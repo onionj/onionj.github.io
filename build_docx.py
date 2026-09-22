@@ -166,9 +166,18 @@ def add_sub_heading(doc, text):
     return p
 
 
+def strip_bullet_marker(text):
+    """Remove the leading markdown bullet marker only.
+
+    lstrip('* ') eats EVERY leading '*' and space, so '* **Bold**' loses the
+    opening '**' too and the closing one renders as literal asterisks.
+    """
+    return re.sub(r'^\s*[*-]\s+', '', text)
+
+
 def add_bullet(doc, text):
     p = doc.add_paragraph(style='List Bullet')
-    add_inline_formatting(p, text.lstrip('* ').lstrip('- '))
+    add_inline_formatting(p, strip_bullet_marker(text))
     for run in p.runs:
         run.font.size = Pt(9.5)
     set_paragraph_spacing(p, before=0, after=1)
@@ -258,11 +267,13 @@ set_paragraph_spacing(contact_p, before=0, after=4)
 
 # ── Sections ──────────────────────────────────────────────────────────────────
 
+# Order the .docx renders sections in. A name listed here that no longer exists
+# in index.md is skipped; a section in index.md that is NOT listed here is
+# silently dropped, which is how the Skills section went missing when
+# 'Technical Skills' was renamed.
 SECTION_ORDER = [
-    'Professional Summary',
     'Work Experience',
-    'Technical Skills',
-    'Soft Skills',
+    'Skills',
     'Open Source',
     'Education',
     'Languages',
@@ -313,7 +324,7 @@ for section_name in SECTION_ORDER:
                 bullet_count += 1
         continue
 
-    if section_name in ('Technical Skills', 'Soft Skills', 'Languages', 'Education'):
+    if section_name in ('Skills', 'Languages', 'Education'):
         for line in lines:
             stripped = line.strip()
             if stripped.startswith('* ') or stripped.startswith('- '):
