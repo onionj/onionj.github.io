@@ -5,17 +5,17 @@
 - Stack: Go, Python, FastAPI, PostgreSQL, MongoDB, ClickHouse, Redis, RabbitMQ, WebSocket, Docker
 
 #### B2C Tourism Platform
-* Rebuilt ownership of a **tourism platform (3M+ users, 9+ B2B partners)** that had run without a developer for months, learning the codebase and business rules unaided, and now lead a 3-engineer team on it, running system design and code reviews: payment routing to per-account settlement terminals and a reconciliation system of 3 interacting state machines for automated and manual mismatch resolution
+* **Tech lead** of the platform: ran it as sole developer for months after it was left without one, learned the codebase and business rules unaided, then grew into a 3-engineer team hired around the work, onboarding each junior and owning system design, code reviews and technical direction on a **tourism platform serving 3M+ users and 9+ B2B partners**: payment routing to per-account settlement terminals and a reconciliation system of 3 interacting state machines for automated and manual mismatch resolution
 * Built corporate benefit-card contracts (quota- or balance-based entitlements per employee) and a multi-case **refund engine** (discount codes, disability subsidies, corporate credits); redesigned DB connection lifecycle and **Redis caching** to sustain **50,000 concurrent peak users**
 
 #### Payment Gateway
-* Built and own the production payment layer, in two independent implementations for two separate teams: **Python/FastAPI** and **Go**. Every provider sits behind one fixed 6-endpoint contract (make/verify/reverse plus open/approve/cancel), so adding a gateway never changes calling code; **Redis distributed locking** and **idempotency** guarantee exactly-once capture. 5 integrated gateways; the Go build is used by two municipal projects
+* Built the production payment layer from scratch in two independent implementations for two separate teams, **Python/FastAPI** and **Go**, and now own it with the team maintaining it alongside me. Every provider sits behind one fixed 6-endpoint contract (make/verify/reverse plus open/approve/cancel), so adding a gateway never changes calling code; **Redis distributed locking** and **idempotency** guarantee exactly-once capture. 5 integrated gateways; the Go build is used by two municipal projects
 
 #### Audit Log Service
 * Built and own a tamper-evident audit log service in **Go**, from design through production: **per-source HMAC-SHA256 hash chains** — each connected backend has its own independent chain — a **Redis Streams** → **ClickHouse** high-throughput ingestion pipeline, and an emergency mode with disk monitoring and automatic log rotation
 
 #### Nekisa — Building Management & Security Monitoring
-* Led the backend of a **building management and security platform** running **4,500+ IoT devices** (cameras, access control, barriers) in production at a large shopping mall and a metro system, where **RabbitMQ** device streams drive a configurable scenario engine — surfacing a zone's cameras the moment a door opens
+* **Tech lead** on a **building management and security platform** running **4,500+ IoT devices** (cameras, access control, barriers) in production at a large shopping mall and a metro system, where **RabbitMQ** device streams drive a configurable scenario engine — surfacing a zone's cameras the moment a door opens
 * Integrated several new device types as sole backend engineer on this long-running production system, including **camera tamper detection** that stores the shock-wave signal and a snapshot when a unit is physically disturbed; now hardening the platform toward a formal security certification
 
 #### Real-Time Analytics and Taxi POS
@@ -55,6 +55,7 @@
 - **Architecture**: Distributed systems, microservices, event-driven design, high concurrency, idempotency
 - **DevOps**: Linux, Docker, Git, CI/CD
 - **Security**: JWT, OWASP best practices
+- **Leadership**: Tech lead of a 3-engineer team, design consultant to other teams in the company
 
 ## Education
 * **Bachelor of Science in Civil Engineering**
