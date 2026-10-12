@@ -246,23 +246,51 @@ run = name_p.add_run(config['full_name'])
 run.bold = True
 run.font.size = Pt(22)
 run.font.color.rgb = ACCENT_COLOR
-set_paragraph_spacing(name_p, before=0, after=3)
+set_paragraph_spacing(name_p, before=0, after=2)
 
-contacts = []
-if config.get('gmail'):
-    contacts.append(config['gmail_url'])
-if config.get('linkedin'):
-    contacts.append(config['linkedin_url'].removeprefix('https://www.'))
-if config.get('github'):
-    contacts.append(config['github_url'].removeprefix('https://'))
-if config.get('phone') and config.get('phone_number'):
-    contacts.append(config['phone_number'])
+title_p = doc.add_paragraph()
+title_p.alignment = WD_ALIGN_PARAGRAPH.LEFT
+run_title = title_p.add_run('Senior Backend Engineer | Tech Lead')
+run_title.bold = True
+run_title.font.size = Pt(11)
+run_title.font.color.rgb = DARK_COLOR
+set_paragraph_spacing(title_p, before=0, after=3)
 
 contact_p = doc.add_paragraph()
 contact_p.alignment = WD_ALIGN_PARAGRAPH.LEFT
-run = contact_p.add_run('  |  '.join(contacts))
-run.font.size = Pt(9.5)
-run.font.color.rgb = DARK_COLOR
+
+def add_contact_sep(p):
+    sep = p.add_run('  |  ')
+    sep.font.size = Pt(9.5)
+    sep.font.color.rgb = DARK_COLOR
+
+first = True
+if config.get('gmail'):
+    first = False
+    add_hyperlink(contact_p, config['gmail_url'], f"mailto:{config['gmail_url']}")
+
+if config.get('phone') and config.get('phone_number'):
+    if not first:
+        add_contact_sep(contact_p)
+    first = False
+    phone_clean = config['phone_number'].split()[0]
+    phone_digits = ''.join(c for c in phone_clean if c.isdigit())
+    add_hyperlink(contact_p, f"WhatsApp: {phone_clean}", f"https://wa.me/{phone_digits}")
+
+if config.get('linkedin'):
+    if not first:
+        add_contact_sep(contact_p)
+    first = False
+    li_display = config['linkedin_url'].removeprefix('https://www.').removeprefix('https://')
+    add_hyperlink(contact_p, li_display, config['linkedin_url'])
+
+if config.get('github'):
+    if not first:
+        add_contact_sep(contact_p)
+    first = False
+    gh_display = config['github_url'].removeprefix('https://')
+    add_hyperlink(contact_p, gh_display, config['github_url'])
+
 set_paragraph_spacing(contact_p, before=0, after=4)
 
 # ── Sections ──────────────────────────────────────────────────────────────────
@@ -272,11 +300,12 @@ set_paragraph_spacing(contact_p, before=0, after=4)
 # silently dropped, which is how the Skills section went missing when
 # 'Technical Skills' was renamed.
 SECTION_ORDER = [
+    'Professional Summary',
+    'Technical Skills',
     'Work Experience',
-    'Skills',
     'Open Source',
-    'Education',
     'Languages',
+    'Education',
 ]
 
 for section_name in SECTION_ORDER:
@@ -324,7 +353,7 @@ for section_name in SECTION_ORDER:
                 bullet_count += 1
         continue
 
-    if section_name in ('Skills', 'Languages', 'Education'):
+    if section_name in ('Technical Skills', 'Skills', 'Languages', 'Education'):
         for line in lines:
             stripped = line.strip()
             if stripped.startswith('* ') or stripped.startswith('- '):

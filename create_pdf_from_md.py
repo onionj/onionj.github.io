@@ -7,21 +7,24 @@ with open("_config.yml") as config_file, open("index.md") as md_file:
     body = md_file.read()
 
 # Build header
-header = f"# {configs['full_name']}\n"
+header = f"# {configs['full_name']}\n\n"
+header += "**Senior Backend Engineer | Tech Lead**\n\n"
 
 links = []
-if configs["github"]:
-    links.append(f"[**Github**: {configs['github_url'].removeprefix('https://')}]({configs['github_url']})")
 if configs["gmail"]:
     links.append(f"[**Email**: {configs['gmail_url']}](mailto:{configs['gmail_url']})")
+if configs["phone"]:
+    phone_digits = "".join(c for c in configs['phone_number'].split()[0] if c.isdigit())
+    wa_url = f"https://wa.me/{phone_digits}"
+    links.append(
+        f"[**WhatsApp**: {configs['phone_number'].split()[0]}]({wa_url})"
+    )
 if configs["linkedin"]:
     links.append(
-        f"[**LinkedIn**: {configs['linkedin_url'].removeprefix('https://')}]({configs['linkedin_url']})"
+        f"[**LinkedIn**: {configs['linkedin_url'].removeprefix('https://www.').removeprefix('https://')}]({configs['linkedin_url']})"
     )
-if configs["phone"]:
-    links.append(
-        f"[**Phone**: {configs['phone_number']}](tel:{configs['phone_number']})"
-    )
+if configs["github"]:
+    links.append(f"[**Github**: {configs['github_url'].removeprefix('https://')}]({configs['github_url']})")
 
 header += " | ".join(links)
 

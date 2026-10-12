@@ -1,3 +1,15 @@
+## Professional Summary
+Backend Software Engineer and Tech Lead with 5 years of experience architecting high-concurrency systems and real-time distributed platforms serving millions of users. Proven track record leading engineering teams, designing resilient payment and event-driven architectures, and scaling Go and Python services in high-throughput production environments.
+
+## Technical Skills
+- **Languages**: Go, Python, Solidity
+- **Frameworks & Protocols**: FastAPI, Gin, REST, WebSocket
+- **Databases & Caching**: PostgreSQL, MongoDB, ClickHouse, Redis
+- **Messaging & Streaming**: RabbitMQ, Redis Streams
+- **Architecture**: Distributed systems, microservices, event-driven design, high concurrency, idempotency
+- **DevOps**: Linux, Docker, Git, CI/CD
+- **Security**: JWT, OWASP best practices
+- **Leadership**: Tech lead of a 3-engineer team, design consultant to other teams in the company
 
 ## Work Experience
 
@@ -48,19 +60,8 @@
 - [**PriceBot**](https://github.com/onionj/pricebot), A Go Telegram bot providing real-time currency exchange rates, gold prices, and cryptocurrency values
 - [**Social Token Experiment**](https://ihateyou.top), A minimalist ERC-20 social token on Polygon, designed as an experiment in on-chain communication (Solidity)
 
-## Skills
-- **Languages**: Go, Python, Solidity
-- **Frameworks & Protocols**: FastAPI, Gin, REST, WebSocket
-- **Databases & Caching**: PostgreSQL, MongoDB, ClickHouse, Redis
-- **Messaging & Streaming**: RabbitMQ, Redis Streams
-- **Architecture**: Distributed systems, microservices, event-driven design, high concurrency, idempotency
-- **DevOps**: Linux, Docker, Git, CI/CD
-- **Security**: JWT, OWASP best practices
-- **Leadership**: Tech lead of a 3-engineer team, design consultant to other teams in the company
-
-## Education
-* **Bachelor of Science in Civil Engineering**
-
 ## Languages
 * **English**: Professional Working Proficiency
 
+## Education
+* **Bachelor of Science in Civil Engineering**
