@@ -20,8 +20,8 @@ linkedin_url: https://www.linkedin.com/in/samannzft
 gmail: true
 gmail_url: samannzft@gmail.com
 
-phone: false
-phone_number: ""
+phone: true
+phone_number: "+989399608591 (WhatsApp)"
 
 footer: false
 site_footer_text: ""

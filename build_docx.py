@@ -246,17 +246,25 @@ run = name_p.add_run(config['full_name'])
 run.bold = True
 run.font.size = Pt(22)
 run.font.color.rgb = ACCENT_COLOR
-set_paragraph_spacing(name_p, before=0, after=3)
+set_paragraph_spacing(name_p, before=0, after=2)
+
+title_p = doc.add_paragraph()
+title_p.alignment = WD_ALIGN_PARAGRAPH.LEFT
+run_title = title_p.add_run('Senior Backend Engineer | Tech Lead')
+run_title.bold = True
+run_title.font.size = Pt(11)
+run_title.font.color.rgb = DARK_COLOR
+set_paragraph_spacing(title_p, before=0, after=3)
 
 contacts = []
 if config.get('gmail'):
     contacts.append(config['gmail_url'])
-if config.get('linkedin'):
-    contacts.append(config['linkedin_url'].removeprefix('https://www.'))
-if config.get('github'):
-    contacts.append(config['github_url'].removeprefix('https://'))
 if config.get('phone') and config.get('phone_number'):
     contacts.append(config['phone_number'])
+if config.get('linkedin'):
+    contacts.append(config['linkedin_url'].removeprefix('https://www.').removeprefix('https://'))
+if config.get('github'):
+    contacts.append(config['github_url'].removeprefix('https://'))
 
 contact_p = doc.add_paragraph()
 contact_p.alignment = WD_ALIGN_PARAGRAPH.LEFT
@@ -272,11 +280,12 @@ set_paragraph_spacing(contact_p, before=0, after=4)
 # silently dropped, which is how the Skills section went missing when
 # 'Technical Skills' was renamed.
 SECTION_ORDER = [
+    'Professional Summary',
+    'Technical Skills',
     'Work Experience',
-    'Skills',
     'Open Source',
-    'Education',
     'Languages',
+    'Education',
 ]
 
 for section_name in SECTION_ORDER:
@@ -324,7 +333,7 @@ for section_name in SECTION_ORDER:
                 bullet_count += 1
         continue
 
-    if section_name in ('Skills', 'Languages', 'Education'):
+    if section_name in ('Technical Skills', 'Skills', 'Languages', 'Education'):
         for line in lines:
             stripped = line.strip()
             if stripped.startswith('* ') or stripped.startswith('- '):
