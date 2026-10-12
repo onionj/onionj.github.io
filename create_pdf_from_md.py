@@ -14,9 +14,10 @@ links = []
 if configs["gmail"]:
     links.append(f"[**Email**: {configs['gmail_url']}](mailto:{configs['gmail_url']})")
 if configs["phone"]:
-    phone_clean = configs['phone_number'].split()[0]
+    phone_digits = "".join(c for c in configs['phone_number'].split()[0] if c.isdigit())
+    wa_url = f"https://wa.me/{phone_digits}"
     links.append(
-        f"[**Phone**: {configs['phone_number']}](tel:{phone_clean})"
+        f"[**WhatsApp**: {configs['phone_number'].split()[0]}]({wa_url})"
     )
 if configs["linkedin"]:
     links.append(
